@@ -1,13 +1,9 @@
 # RiceAutoDrone.github.io
 Information of the project
 
-# Reference
-https://ardupilot.org/dev/docs/raspberry-pi-via-mavlink.html
-
-https://www.youtube.com/watch?v=nIuoCYauW3s
-
 # Flight Controller
 ## Setting up the flight controller¶
+https://ardupilot.org/dev/docs/raspberry-pi-via-mavlink.html
 Connect to the flight controller with a ground station (i.e. Mission Planner) and set the following parameters:
 
 ```SERIAL2_PROTOCOL = 2 (the default)``` to enable MAVLink 2 on the serial port.
@@ -16,13 +12,30 @@ Connect to the flight controller with a ground station (i.e. Mission Planner) an
 
 ```LOG_BACKEND_TYPE = 3``` if you are using APSync to stream the dataflash log files to the RPi
 
-
 # Respberru Pi
 ## Set Static IP
 This is for connecting pi by fixed ssh.
+https://www.makeuseof.com/raspberry-pi-set-static-ip/
+Check current IP with
+```hostname -I```
 
+Then check router’s gateway IP address wuth
+```
+ip r | grep default
+sudo nano /etc/resolv.conf
 ```
 
+Use this command to open the config file
+```
+sudo nano /etc/dhcpcd.conf
+```
+
+Add these line at the end.
+```
+interface wlan0
+static ip_address=192.168.1.120/24
+static routers=192.168.1.254
+static domain_name_servers=192.168.1.254
 ```
 
 ## Configure the serial port (UART)¶
@@ -52,6 +65,7 @@ This assumes you have a SSH connection to the Pi. If not, see see the the RPi Do
 See the MAVProxy Documentation for install instructions
 
 ### Install
+https://www.youtube.com/watch?v=nIuoCYauW3s
 For Python 3 on Debian based systems (including Ubuntu, WSL, Raspian):
 ```
 sudo apt-get install 
