@@ -3,6 +3,7 @@ Information of the project
 
 # Reference
 https://ardupilot.org/dev/docs/raspberry-pi-via-mavlink.html
+https://www.youtube.com/watch?v=nIuoCYauW3s
 
 # Flight Controller
 ## Setting up the flight controller¶
@@ -38,24 +39,23 @@ Reboot the Raspberry Pi when you are done.
 
 The Raspberry Pi’s serial port will now be usable on /dev/serial0.
 
-## Setup the RPi Software
-MAVProxy¶
+## Setup the RPi Software (MAVProxy)
 MAVProxy can be used to send commands to the flight controller from the Pi. It can also be used to route telemetry to other network endpoints.
 
 This assumes you have a SSH connection to the Pi. If not, see see the the RPi Documentation.
-
 See the MAVProxy Documentation for install instructions
+
 ### Install
 For Python 3 on Debian based systems (including Ubuntu, WSL, Raspian):
 ```
-sudo apt-get install python3-dev python3-opencv python3-wxgtk4.0 python3-pip python3-matplotlib python3-lxml python3-pygame
-pip3 install PyYAML mavproxy --user
-echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
+sudo apt-get install 
+sudo apt-get install python3-dev python3-opencv python3-wxgtk4.0 python3-pip python3-matplotlib python3-lxml libxml2-dev libxslt-dev
+sudo pip install PyYAML mavproxy
 ```
 
 To test the RPi and flight controller are able to communicate with each other first ensure the RPi and flight controller are powered, then in a console on the RPi type:
 ```
-mavproxy.py --master=/dev/serial0 --baudrate 921600 --aircraft MyCopter
+sudo mavproxy.py --master=/dev/ttyAMA0 --aircraft MyCopter
 ```
 
 Once MAVProxy has started you should be able to type in the following command to display the ARMING_CHECK parameters value
