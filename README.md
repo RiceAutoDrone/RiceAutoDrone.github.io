@@ -4,6 +4,7 @@ Information of the project
 # Flight Controller
 ## Setting up the flight controller¶
 https://ardupilot.org/dev/docs/raspberry-pi-via-mavlink.html
+
 Connect to the flight controller with a ground station (i.e. Mission Planner) and set the following parameters:
 
 ```SERIAL2_PROTOCOL = 2 (the default)``` to enable MAVLink 2 on the serial port.
@@ -15,6 +16,7 @@ Connect to the flight controller with a ground station (i.e. Mission Planner) an
 # Respberru Pi
 ## Set Static IP
 https://www.makeuseof.com/raspberry-pi-set-static-ip/
+
 This is for connecting pi by fixed ssh.
 Check current IP with
 
@@ -39,7 +41,7 @@ static routers=192.168.1.254
 static domain_name_servers=192.168.1.254
 ```
 
-## Configure the serial port (UART)¶
+## Configure the serial port (UART)
 If not already configured, the Raspberry Pi’s serial port (UART) will need to be enabled. Use the Raspberry Pi configuration utility for this.
 
 Type:
@@ -67,6 +69,7 @@ See the MAVProxy Documentation for install instructions
 
 ### Install
 https://www.youtube.com/watch?v=nIuoCYauW3s
+
 For Python 3 on Debian based systems (including Ubuntu, WSL, Raspian):
 ```
 sudo apt-get install 
