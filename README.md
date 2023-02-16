@@ -3,6 +3,7 @@ Information of the project
 
 # Reference
 https://ardupilot.org/dev/docs/raspberry-pi-via-mavlink.html
+
 https://www.youtube.com/watch?v=nIuoCYauW3s
 
 # Flight Controller
@@ -15,7 +16,15 @@ Connect to the flight controller with a ground station (i.e. Mission Planner) an
 
 ```LOG_BACKEND_TYPE = 3``` if you are using APSync to stream the dataflash log files to the RPi
 
+
 # Respberru Pi
+## Set Static IP
+This is for connecting pi by fixed ssh.
+
+```
+
+```
+
 ## Configure the serial port (UART)¶
 If not already configured, the Raspberry Pi’s serial port (UART) will need to be enabled. Use the Raspberry Pi configuration utility for this.
 
@@ -25,19 +34,16 @@ sudo raspi-config
 ```
 And in the utility, select “Interfacing Options”:
 
-../_images/RaspberryPi_Serial1.png
-RasPiConfiguration Utility¶
-
 And then “Serial”:
 
-../_images/RaspberryPi_Serial2.png
 When prompted, select no to “Would you like a login shell to be accessible over serial?”.
 
 When prompted, select yes to “Would you like the serial port hardware to be enabled?”.
 
 Reboot the Raspberry Pi when you are done.
 
-The Raspberry Pi’s serial port will now be usable on /dev/serial0.
+The Raspberry Pi’s serial port will now be usable on /dev/ttyAMA0.
+
 
 ## Setup the RPi Software (MAVProxy)
 MAVProxy can be used to send commands to the flight controller from the Pi. It can also be used to route telemetry to other network endpoints.
@@ -55,7 +61,7 @@ sudo pip install PyYAML mavproxy
 
 To test the RPi and flight controller are able to communicate with each other first ensure the RPi and flight controller are powered, then in a console on the RPi type:
 ```
-sudo mavproxy.py --master=/dev/ttyAMA0 --aircraft MyCopter
+sudo mavproxy.py --master=/dev/ttyAMA0 --aircraft MyCopter //--console
 ```
 
 Once MAVProxy has started you should be able to type in the following command to display the ARMING_CHECK parameters value
@@ -64,15 +70,16 @@ param show ARMING_CHECK
 param set ARMING_CHECK 0
 arm throttle
 ```
-../_images/RaspberryPi_ArmTestThroughPutty.png
+
 Note
 
 If you get an error about not being able to find log files or if this example otherwise doesn’t run properly, make sure that you haven’t accidentally assigned these files to another username, such as Root.
 
+
 To run MAVProxy as a telemetry router on the Pi, set it up to run as a service and use the –daemon and –non-interactive parameters. For example:
 ```
-mavproxy.py --daemon --non-interactive --default-modules='' --continue --master=/dev/serial0 --baudrate 1500000 --out=udp:pro:14550
+mavproxy.py --daemon --non-interactive --default-modules='' --continue --master=/dev/ttyAMA0 --out=udp:pro:14550
 Note
 ```
-Debug https://benswritting.com/raspberry-pi-to-pixhawk-wiring-mav-link-1-down-solved/
+
 If the Raspberry PI is heavily loaded, mavproxy.py might not provide a reliable connecton for telemetry routing. This is more likely on older/slower devices like the Raspberry PI Zero. If this happens, consider using mavlink-routerd. See this post on the ArduPilot forum for a detailed discussion: MavLink Routing with Router software.
