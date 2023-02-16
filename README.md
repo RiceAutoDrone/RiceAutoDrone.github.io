@@ -14,9 +14,10 @@ Connect to the flight controller with a ground station (i.e. Mission Planner) an
 
 # Respberru Pi
 ## Set Static IP
-This is for connecting pi by fixed ssh.
 https://www.makeuseof.com/raspberry-pi-set-static-ip/
+This is for connecting pi by fixed ssh.
 Check current IP with
+
 ```hostname -I```
 
 Then check router’s gateway IP address wuth
