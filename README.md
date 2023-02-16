@@ -55,7 +55,7 @@ echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
 
 To test the RPi and flight controller are able to communicate with each other first ensure the RPi and flight controller are powered, then in a console on the RPi type:
 ```
-python3 mavproxy.py --master=/dev/serial0 --baudrate 921600 --aircraft MyCopter
+mavproxy.py --master=/dev/serial0 --baudrate 921600 --aircraft MyCopter
 ```
 
 Once MAVProxy has started you should be able to type in the following command to display the ARMING_CHECK parameters value
