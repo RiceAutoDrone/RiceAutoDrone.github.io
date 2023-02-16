@@ -19,8 +19,9 @@ Connect to the flight controller with a ground station (i.e. Mission Planner) an
 If not already configured, the Raspberry Pi’s serial port (UART) will need to be enabled. Use the Raspberry Pi configuration utility for this.
 
 Type:
-
+```
 sudo raspi-config
+```
 And in the utility, select “Interfacing Options”:
 
 ../_images/RaspberryPi_Serial1.png
