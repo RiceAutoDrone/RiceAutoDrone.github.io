@@ -106,5 +106,5 @@ If the Raspberry PI is heavily loaded, mavproxy.py might not provide a reliable 
 https://dronekit-python.readthedocs.io/en/latest/guide/quick_start.html
 
 ```
-sudo apt-get install dronekit dronekit-sitl
+sudo pip3 install dronekit dronekit-sitl
 ```
