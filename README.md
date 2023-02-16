@@ -18,9 +18,20 @@ Connect to the flight controller with a ground station (i.e. Mission Planner) an
 https://www.makeuseof.com/raspberry-pi-set-static-ip/
 
 This is for connecting pi by fixed ssh.
+
+When prompted, select yes.
+
+Type:
+```
+sudo raspi-config
+```
+in the utility, "Interfacing Options -> SSH":
+
 Check current IP with
 
-```hostname -I```
+```
+hostname -I
+```
 
 Then check router’s gateway IP address wuth
 ```
@@ -48,13 +59,11 @@ Type:
 ```
 sudo raspi-config
 ```
-And in the utility, select “Interfacing Options”:
+And in the utility, "Interfacing Options -> Serial":
 
-And then “Serial”:
+When prompted, select no to "Would you like a login shell to be accessible over serial?".
 
-When prompted, select no to “Would you like a login shell to be accessible over serial?”.
-
-When prompted, select yes to “Would you like the serial port hardware to be enabled?”.
+When prompted, select yes to "Would you like the serial port hardware to be enabled?".
 
 Reboot the Raspberry Pi when you are done.
 
@@ -70,11 +79,24 @@ See the MAVProxy Documentation for install instructions
 ### Install
 https://www.youtube.com/watch?v=nIuoCYauW3s
 
+```
+sudo nano /boot/config.txt
+```
+
+add 
+
+```
+enable_uart=1
+dtoverlay=disable-bt
+```
+
 For Python 3 on Debian based systems (including Ubuntu, WSL, Raspian):
 ```
-sudo apt-get install 
+sudo apt-get update 
 sudo apt-get install python3-dev python3-opencv python3-wxgtk4.0 python3-pip python3-matplotlib python3-lxml libxml2-dev libxslt-dev
-sudo pip install PyYAML mavproxy
+sudo pip2 install PyYAML mavproxy --user
+echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
+sudo reboot
 ```
 
 To test the RPi and flight controller are able to communicate with each other first ensure the RPi and flight controller are powered, then in a console on the RPi type:
@@ -106,5 +128,5 @@ If the Raspberry PI is heavily loaded, mavproxy.py might not provide a reliable 
 https://dronekit-python.readthedocs.io/en/latest/guide/quick_start.html
 
 ```
-sudo pip3 install dronekit dronekit-sitl
+sudo pip install dronekit dronekit-sitl
 ```
