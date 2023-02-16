@@ -74,4 +74,5 @@ To run MAVProxy as a telemetry router on the Pi, set it up to run as a service a
 mavproxy.py --daemon --non-interactive --default-modules='' --continue --master=/dev/serial0 --baudrate 1500000 --out=udp:pro:14550
 Note
 ```
+Debug https://benswritting.com/raspberry-pi-to-pixhawk-wiring-mav-link-1-down-solved/
 If the Raspberry PI is heavily loaded, mavproxy.py might not provide a reliable connecton for telemetry routing. This is more likely on older/slower devices like the Raspberry PI Zero. If this happens, consider using mavlink-routerd. See this post on the ArduPilot forum for a detailed discussion: MavLink Routing with Router software.
