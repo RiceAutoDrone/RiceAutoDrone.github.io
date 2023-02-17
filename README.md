@@ -211,7 +211,7 @@ For Python 3 on Debian based systems (including Ubuntu, WSL, Raspian):
 ```
 sudo apt-get update 
 sudo apt-get install python3-dev python3-opencv python3-wxgtk4.0 python3-pip python3-matplotlib python3-lxml libxml2-dev libxslt-dev
-sudo pip3 install PyYAML mavproxy --user
+pip3 install PyYAML mavproxy --user
 echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
 sudo reboot
 ```
