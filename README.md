@@ -211,14 +211,14 @@ For Python 3 on Debian based systems (including Ubuntu, WSL, Raspian):
 ```
 sudo apt-get update 
 sudo apt-get install python3-dev python3-opencv python3-wxgtk4.0 python3-pip python3-matplotlib python3-lxml libxml2-dev libxslt-dev
-sudo pip2 install PyYAML mavproxy --user
+sudo pip3 install PyYAML mavproxy --user
 echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
 sudo reboot
 ```
 
 To test the RPi and flight controller are able to communicate with each other first ensure the RPi and flight controller are powered, then in a console on the RPi type:
 ```
-sudo mavproxy.py --master=/dev/ttyAMA0 --aircraft MyCopter //--console
+mavproxy.py --master=/dev/ttyAMA0 --aircraft MyCopter //--console
 ```
 
 Once MAVProxy has started you should be able to type in the following command to display the ARMING_CHECK parameters value
