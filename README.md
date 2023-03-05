@@ -253,3 +253,8 @@ sudo pip3 install pyception
 ```
 python auto.py --connect /dev/ttyAMA0
 ```
+
+# Set up Git
+https://singleboardbytes.com/649/use-github-raspberry-pi.htm
+
+
