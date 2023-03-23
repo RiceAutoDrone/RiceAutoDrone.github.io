@@ -1,6 +1,6 @@
 ---
 layout: landingpage
-title: A landing page
+title: Rice Autodrone
 subtitle: With image header
 header_type: image
 header_img: "https://dieghernan.github.io/chulapa/assets/img/site/transparent.png"
