@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Chulapa on remote
+title: Rice Autodrone
 header_type: hero
-subtitle: Starter pack
+subtitle: A MECE Capstone Project
 ---
 
 Click [**Use this template**](https://github.com/dieghernan/chulapa-101/generate) button above for cloning this repo and get started with [Chulapa Jekyll theme](https://github.com/dieghernan/chulapa).
