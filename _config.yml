@@ -10,8 +10,8 @@ remote_theme: dieghernan/chulapa
 locale                  :     #default["en-US"] format language-TERRITORY , e.g fr, en-GB, es-MX, pt-BR
 title                   :     Rice Autodrone    #default["repository_name"]
 title_separator         :     #default [" | "]
-subtitle                :     Chulapa Jekyll Theme starter pack    #default [your-repository-tagline]  
-description             :     Chulapa Jekyll Theme starter pack #default [your-repository-tagline]
+subtitle                :     A MECE Capstone Project     #default [your-repository-tagline]  
+description             :     A MECE Capstone Project     #default [your-repository-tagline]
 url                     :     #See baseurl - On Github Pages you may leave it blank - If you use CNAME use your domain
 baseurl                 :     #On Github Pages you may leave it blank. Have a look to: https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/
 words_per_minute        :     #default[200]
@@ -21,7 +21,7 @@ timezone                :     #"Europe/Madrid ,see https://jekyllrb.com/docs/con
 og_image                :     #default[author.avatar (see below)] or [github-avatar]
 twitter_site            :     #Avoid @
 author:
-  name                  :     Your Name   # Name Surname Company
+  name                  :     Yu Che Lin   # Name Surname Company
   avatar                :     # Try a square file. Info: Your github avatar on https://github.com/[USERNAME].png
   location              :     "Houston, TX, US"   # New York, USA 
 #  links:                
