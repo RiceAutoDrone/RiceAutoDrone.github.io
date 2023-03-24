@@ -1,6 +1,6 @@
 ---
-title: Installation
-subtitle: How to setup Flight Controller
+title: How to setup Flight Controller
+# subtitle: How to setup Flight Controller
 excerpt: Flight Controller Settings
 show_toc: true
 ---

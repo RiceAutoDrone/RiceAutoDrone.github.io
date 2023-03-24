@@ -1,6 +1,6 @@
 ---
 layout: indexcategory
-title: '<span class="chulapa">Software</span> Installation'
+title: 'Installation'
 subtitle: Read the documentation
 permalink: /installation
 include_collection: installation
