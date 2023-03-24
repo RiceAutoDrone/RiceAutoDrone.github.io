@@ -102,12 +102,11 @@ navbar:
     url: /blog/
   - title: Flight Controller Settings
     url: /flight_controller_settings
-  - title: Installation
+  - title: Raspberry Pi Settings
+    url: /raspberrypi_settings
     child:
-     - title: Installation Landing Page
-       url: /installation
-    #  - title: Access Point
-    #    url: /installation/01_access_point
+     - title: Access Point
+       url: /installation/01_access_point
     #  - title: Global Settings
     #    url: /installation/02-config
     #  - title: Theming your site
