@@ -7,7 +7,6 @@ show_toc: true
 
 [Reference](https://www.raspberrypi.com/documentation/computers/configuration.html#setting-up-a-routed-wireless-access-point)
 
-
 # 1. Install AP and Management Software
 In order to work as an access point, the Raspberry Pi needs to have the hostapd access point software package installed:
 ```
