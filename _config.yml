@@ -117,9 +117,9 @@ navbar:
   #   url     : https://github.com/dieghernan/chulapa-101/generate
  - title   : Hi # Label submenu
 #    child:		
-#    - title: # Child label		
+#    - title: Hi2  # Child label		
 #      url  : # child url	
-#    - title: # Child label		
+#    - title: Hi3  # Child label		
 #      url  : # child url	
 #Social links to be placed on your site footer
 footer:
