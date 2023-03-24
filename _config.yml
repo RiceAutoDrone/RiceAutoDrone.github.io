@@ -99,7 +99,7 @@ navbar:
     img     :  # An small image, try 30x30px
   nav:
   - title: Blog
-    url: /blog
+    url: /blog/
   - title: Settings
     url: /settings/
   - title: Flight Controller Settings
