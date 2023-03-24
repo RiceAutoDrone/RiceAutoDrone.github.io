@@ -120,7 +120,7 @@ navbar:
    - title: Hi2  # Child label		
      url  : # child url	
    - title: Hi3  # Child label		
-#      url  : # child url	
+     url  : # child url	
 #Social links to be placed on your site footer
 footer:
   links:
