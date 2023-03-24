@@ -198,8 +198,8 @@ chulapa-skin:
   highlight     :  "github" # default["default"]
   skin          :  gitdev   # Optional predefined skins
   autothemer    :  true # Bool: Use autotheming
-  vars          :    
-    primary     :   lightskyblue #default ["#007bff"] - Bootstrap blue
+  # vars          :    
+  #   primary     :   lightskyblue #default ["#007bff"] - Bootstrap blue
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
 
