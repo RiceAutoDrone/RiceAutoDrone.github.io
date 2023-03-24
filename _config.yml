@@ -100,8 +100,8 @@ navbar:
   nav:
   - title: Blog
     url: /blog/
-  - title: Settings
-    url: /settings/
+  # - title: Settings
+  #   url: /settings/
   - title: Flight Controller Settings
     url: /flight_controller_settings
   - title: Raspberry Pi Settings
