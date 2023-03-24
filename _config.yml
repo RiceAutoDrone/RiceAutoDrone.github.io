@@ -100,14 +100,18 @@ navbar:
   nav:
   - title: Blog
     url: /blog/
-  - title: Docs
+  - title: Flight Controller Settings
     child:
-     - title: Read the Docs
+     - title: Flight Controller Settings Landing Page
+       url: /flight_controller_settings
+  - title: Installation
+    child:
+     - title: Installation Landing Page
        url: /installation
-     - title: Installation
+     - title: Flight Controller Settings
        url: /installation/01_flight_controller
-    #  - title: Global Settings
-    #    url: /installation/02-config
+     - title: Global Settings
+       url: /installation/02-config
     #  - title: Theming your site
     #    url: /installation/03-theming
     #  - title: Layouts & Snippets
