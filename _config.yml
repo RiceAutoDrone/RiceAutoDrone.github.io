@@ -105,7 +105,7 @@ navbar:
      - title: Read the Docs
        url: /installation
      - title: Installation
-       url: /installation/01-install
+       url: /installation/01_flight_controller
     #  - title: Global Settings
     #    url: /installation/02-config
     #  - title: Theming your site

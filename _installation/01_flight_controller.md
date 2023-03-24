@@ -1,6 +1,6 @@
 ---
 title: Installation
-subtitle: How to setup <span class="chulapa">Flight Controller</span>
+subtitle: How to setup Flight Controller
 excerpt: Flight Controller Settings
 show_toc: true
 ---
