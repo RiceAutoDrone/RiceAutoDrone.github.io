@@ -103,12 +103,14 @@ navbar:
   - title: Flight Controller Settings
     url: /flight_controller_settings
   - title: Raspberry Pi Settings
-    url: /raspberrypi_settings
+    # url: /raspberrypi_settings
     child:
+     - title: Index
+       url: /raspberrypi_settings
      - title: Access Point
        url: /raspberrypi_settings/01_access_point
-    #  - title: Global Settings
-    #    url: /installation/02-config
+     - title: Global Settings
+       url: /raspberrypi_settings/02-config
     #  - title: Theming your site
     #    url: /installation/03-theming
     #  - title: Layouts & Snippets
@@ -151,32 +153,6 @@ navbar:
       #   url: /contribute
       # - title: Changelog
       #   url: https://github.com/dieghernan/chulapa/blob/master/CHANGELOG.md
-  
-  # nav:
-  # - title   : Blog # Label
-  #   url     : /blog/ 
-  # - title   : Cheatsheets
-  #   url     : /cheatsheets
-  # - title   : Extras
-  #   child   :
-  #     - title : Tags
-  #       url   : /tags
-  #     - title : Categories
-  #       url   : /categories
-  #     - title : Archive
-  #       url   : /archive
-  #     - title : Current skin
-  #       url   : /current-skin
-  # - title   : Docs
-  #   url     : https://dieghernan.github.io/chulapa/docs/01-install
-  # - title   : Use this template
-  #   url     : https://github.com/dieghernan/chulapa-101/generate
-  # - title   : Hi # Label submenu
-  #   child   :
-  #     - title : Hi2
-  #       url   :
-  #     - title : Hi3
-  #       url   : 
 
 #Social links to be placed on your site footer
 footer:
@@ -211,10 +187,13 @@ paginator_maxnum: 3  #default[3] Custom: max of number to be displayed on the pa
 
 # Collections https://jekyllrb.com/docs/step-by-step/09-collections/
 collections:
+  raspberrypi_settings:
+    output: true
+    permalink: /raspberrypi_settings/:name
   cheatsheet:
     output: true
     permalink: /cheatsheets/:name
-collections_dir     : 
+collections_dir     : collections
 permalink           : /:year:month:day_:title/
 
 
@@ -229,6 +208,15 @@ defaults:
       include_on_search   : false
       cloudtag_url        : /tags #This is where the link on tags would redirect
       cloudcategory_url   : /categories #This is where the link on categories would redirect
+  -
+    scope:
+      path: ""
+      type: "raspberrypi_settings"
+    values:
+      header_type       : "hero"
+      include_on_search : true
+      show_bottomnavs   : true
+      show_comments     : true
   -
     scope:
       path: ""

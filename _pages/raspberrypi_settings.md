@@ -1,9 +1,9 @@
 ---
 layout: indexcategory
-title: 'Raspberry Pi Settings'
-# subtitle: Read the documentation
+title: "Raspberry Pi Settings"
+subtitle: Read the documentation
 permalink: /raspberrypi_settings
-include_collection: raspberrypi_settings
+include_collection: raspberrypi_settings/
 header_type: "hero"
 header_img: "https://images.unsplash.com/photo-1545290614-5ceedf604139?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60"
 og_image: /assets/img/site/banner-docs.png
