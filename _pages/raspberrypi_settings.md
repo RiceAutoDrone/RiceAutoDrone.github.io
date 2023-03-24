@@ -11,5 +11,4 @@ index_sort_asc: true
 index_items: 20
 ---
 
-<span class="chulapa">Chulapa</span> Jekyll Theme has an extensive documentation.
 

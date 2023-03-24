@@ -1,9 +1,7 @@
 ---
-layout: indexcategory
 title: 'Flight Controller Settings'
 subtitle: How to setup Flight Controller
 permalink: /flight_controller_settings
-# include_collection: installation
 header_type: "hero"
 header_img: "https://images.unsplash.com/photo-1545290614-5ceedf604139?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60"
 og_image: /assets/img/site/banner-docs.png
@@ -12,13 +10,10 @@ index_items: 20
 show_toc: true
 ---
 
-<span class="chulapa">Chulapa</span> Jekyll Theme has an extensive documentation.
-
-# Setting up the flight controller¶
-https://ardupilot.org/dev/docs/raspberry-pi-via-mavlink.html
+# Setting up the flight controller
+![Reference]https://ardupilot.org/dev/docs/raspberry-pi-via-mavlink.html
 
 Connect to the flight controller with a ground station (i.e. Mission Planner) and set the following parameters:
-
 
 1. To enable MAVLink 2 on the serial port, set
 

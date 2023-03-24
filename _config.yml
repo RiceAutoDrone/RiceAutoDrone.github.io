@@ -99,7 +99,7 @@ navbar:
     img     :  # An small image, try 30x30px
   nav:
   - title: Blog
-    url: /blog/
+    url: /blog
   - title: Flight Controller Settings
     url: /flight_controller_settings
   - title: Raspberry Pi Settings
@@ -154,7 +154,7 @@ navbar:
   
   # nav:
   # - title   : Blog # Label
-  #   url     : /blog/ # url	
+  #   url     : /blog/ 
   # - title   : Cheatsheets
   #   url     : /cheatsheets
   # - title   : Extras
@@ -172,11 +172,11 @@ navbar:
   # - title   : Use this template
   #   url     : https://github.com/dieghernan/chulapa-101/generate
   # - title   : Hi # Label submenu
-  #   child   :		
-  #     - title : Hi2  # Child label		
-  #       url   : # child url	
-  #     - title : Hi3  # Child label		
-  #       url   : # child url	
+  #   child   :
+  #     - title : Hi2
+  #       url   :
+  #     - title : Hi3
+  #       url   : 
 
 #Social links to be placed on your site footer
 footer:
