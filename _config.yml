@@ -103,7 +103,6 @@ navbar:
   - title: Flight Controller Settings
     url: /flight_controller_settings
   - title: Raspberry Pi Settings
-    # url: /raspberrypi_settings
     child:
      - title: Index
        url: /raspberrypi_settings
@@ -111,18 +110,18 @@ navbar:
        url: /raspberrypi_settings/01-access-point
      - title: Mavproxy
        url: /raspberrypi_settings/02-mavproxy
-    #  - title: Dronkit 
-    #    url: /installation/03_dronekit
-    #  - title: Layouts & Snippets
-    #    url: /installation/04-layouts
+     - title: Git
+       url: /raspberrypi_settings/03-git
+     - title: Dronkit
+       url: /raspberrypi_settings/04-dronekit
     #  - title: FAQs
-    #    url: /installation/05-faq
+    #    url: /raspberrypi_settings/05-faq
     #  - title: Markdown cheatsheet
-    #    url: /installation/markdown-cheatsheet
+    #    url: /raspberrypi_settings/markdown-cheatsheet
     #  - title: Syntax highlighting
-    #    url: /installation/syntax-highlighting
+    #    url: /raspberrypi_settings/syntax-highlighting
     #  - title: Variable dictionary
-    #    url: /installation/variable-dictionary
+    #    url: /raspberrypi_settings/variable-dictionary
   # - title: Skins
   #   url: /skins
   # - title: Demos

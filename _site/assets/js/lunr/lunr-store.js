@@ -44,13 +44,23 @@ var store = [{
         "url": "http://localhost:4000/raspberrypi_settings/02-mavproxy",
         "img": null
       },{
-        "title": null,
-        "subtitle": null,
+        "title": "Dronekit",
+        "subtitle": "Set Dronekit to control the drone",
         "excerpt":
-            "",
-        "categories": null,
-        "date": null,
-        "tags": null,
-        "url": null,
+            "Reference https://singleboardbytes.com/649/use-github-raspberry-pi.htm Setup the RPi Software (Dronekit) Install Launch the Terminal and execute the command below to update the system. sudo apt update sudo apt upgrade Execute the command below...",
+        "categories": [],
+        "date": "2023-03-24",
+        "tags": [],
+        "url": "http://localhost:4000/raspberrypi_settings/03-git",
+        "img": null
+      },{
+        "title": "Dronekit",
+        "subtitle": "Set Dronekit to control the drone",
+        "excerpt":
+            "Reference https://dronekit-python.readthedocs.io/en/latest/guide/quick_start.html Setup the RPi Software (Dronekit) Install sudo apt-get install python-is-python2 sudo apt-get install python-is-python3 sudo pip install dronekit dronekit-sitl sudo pip3 install pyception python auto.py --connect /dev/ttyAMA0 Checkpoint...",
+        "categories": [],
+        "date": "2023-03-24",
+        "tags": [],
+        "url": "http://localhost:4000/raspberrypi_settings/04-dronekit",
         "img": null
       }]
