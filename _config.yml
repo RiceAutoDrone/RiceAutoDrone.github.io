@@ -106,10 +106,10 @@ navbar:
     child:
      - title: Installation Landing Page
        url: /installation
-     - title: Flight Controller Settings
-       url: /installation/01_flight_controller
-     - title: Global Settings
-       url: /installation/02-config
+    #  - title: Access Point
+    #    url: /installation/01_access_point
+    #  - title: Global Settings
+    #    url: /installation/02-config
     #  - title: Theming your site
     #    url: /installation/03-theming
     #  - title: Layouts & Snippets
