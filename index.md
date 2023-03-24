@@ -4,7 +4,7 @@ title: Rice Autodrone
 header_type: hero
 subtitle: A MECE Capstone Project
 # header_type: image
-header_img: "https://riceautodrone.github.io/assets/image/drone.jpg"
+# header_img: "https://riceautodrone.github.io/assets/image/drone.jpg"
 categories: [landing-page]
 ---
 
