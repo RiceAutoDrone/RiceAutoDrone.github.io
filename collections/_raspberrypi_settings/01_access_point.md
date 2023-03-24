@@ -5,9 +5,10 @@ excerpt: Access Point Settings
 show_toc: true
 ---
 
-[Reference](https://www.raspberrypi.com/documentation/computers/configuration.html#setting-up-a-routed-wireless-access-point)
+## Reference
+[https://www.raspberrypi.com/documentation/computers/configuration.html#setting-up-a-routed-wireless-access-point](https://www.raspberrypi.com/documentation/computers/configuration.html#setting-up-a-routed-wireless-access-point)
 
-# 1. Install AP and Management Software
+## 1. Install AP and Management Software
 In order to work as an access point, the Raspberry Pi needs to have the hostapd access point software package installed:
 ```
 sudo apt install hostapd
@@ -27,7 +28,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install -y netfilter-persistent iptables
 ```
 Software installation is complete. We will configure the software packages later on.
 
-# 2.Set up the Network Router
+## 2.Set up the Network Router
 The Raspberry Pi will run and manage a standalone wireless network. It will also route between the wireless and Ethernet networks, providing internet access to wireless clients. If you prefer, you can choose to skip the routing by skipping the section "Enable routing and IP masquerading" below, and run the wireless network in complete isolation.
 
 Define the Wireless Interface IP Configuration
@@ -40,8 +41,8 @@ sudo nano /etc/dhcpcd.conf
 Go to the end of the file and add the following:
 ```
 interface wlan0
-    static ip_address=192.168.4.1/24
-    nohook wpa_supplicant
+static ip_address=192.168.4.1/24
+nohook wpa_supplicant
 ```
 Enable Routing and IP Masquerading
 This section configures the Raspberry Pi to let wireless clients access computers on the main (Ethernet) network, and from there the internet.
@@ -96,7 +97,7 @@ NOTE
 There are three IP address blocks set aside for private networks. There is a Class A block from 10.0.0.0 to 10.255.255.255, a Class B block from 172.16.0.0 to 172.31.255.255, and probably the most frequently used, a Class C block from 192.168.0.0 to 192.168.255.255.
 There are many more options for dnsmasq; see the default configuration file (/etc/dnsmasq.conf) or the online documentation for details.
 
-# 3. Ensure Wireless Operation
+## 3. Ensure Wireless Operation
 Countries around the world regulate the use of telecommunication radio frequency bands to ensure interference-free operation. The Linux OS helps users comply with these rules by allowing applications to be configured with a two-letter "WiFi country code", e.g. US for a computer used in the United States.
 
 In the Raspberry Pi OS, 5 GHz wireless networking is disabled until a WiFi country code has been configured by the user, usually as part of the initial installation process (see wireless configuration pages in this section for details.)
@@ -106,23 +107,23 @@ To ensure WiFi radio is not blocked on your Raspberry Pi, execute the following 
 sudo rfkill unblock wlan
 ```
 This setting will be automatically restored at boot time. We will define an appropriate country code in the access point software configuration, next.
-# 4. Configure the AP Software
+## 4. Configure the AP Software
 Create the hostapd configuration file, located at /etc/hostapd/hostapd.conf, to add the various parameters for your new wireless network.
 ```
 sudo nano /etc/hostapd/hostapd.conf
 ```
-Add the information below to the configuration file. This configuration assumes we are using channel 7, with a network name of NameOfNetwork, and a password AardvarkBadgerHedgehog. Note that the name and password should not have quotes around them. The passphrase should be between 8 and 64 characters in length.
+Add the information below to the configuration file. This configuration assumes we are using channel 7, with a network name of Autodrone, and a password autodrone1948. Note that the name and password should not have quotes around them. The passphrase should be between 8 and 64 characters in length.
 ```
 country_code=GB
 interface=wlan0
-ssid=NameOfNetwork
+ssid=Autodrone
 hw_mode=g
 channel=7
 macaddr_acl=0
 auth_algs=1
 ignore_broadcast_ssid=0
 wpa=2
-wpa_passphrase=AardvarkBadgerHedgehog
+wpa_passphrase=autodrone1948
 wpa_key_mgmt=WPA-PSK
 wpa_pairwise=TKIP
 rsn_pairwise=CCMP
@@ -138,7 +139,7 @@ b = IEEE 802.11b (2.4 GHz)
 g = IEEE 802.11g (2.4 GHz)
 
 Note that when changing the hw_mode, you may need to also change the channel - see Wikipedia for a list of allowed combinations.
-# 5. Running the new Wireless AP
+## 5. Running the new Wireless AP
 Now restart your Raspberry Pi and verify that the wireless access point becomes automatically available.
 ```
 sudo systemctl reboot
@@ -152,5 +153,6 @@ If your wireless client has access to your Raspberry Pi (and the internet, if yo
 If you encounter difficulties, contact the forums for assistance. Please refer to this page in your message.
 
 
-# Checkpoint Image
+## 6. Checkpoint
+- [Image]()
 

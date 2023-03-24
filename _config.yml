@@ -108,11 +108,11 @@ navbar:
      - title: Index
        url: /raspberrypi_settings
      - title: Access Point
-       url: /raspberrypi_settings/01_access_point
-     - title: Global Settings
-       url: /raspberrypi_settings/02-config
-    #  - title: Theming your site
-    #    url: /installation/03-theming
+       url: /raspberrypi_settings/01-access-point
+     - title: Mavproxy
+       url: /raspberrypi_settings/02-mavproxy
+    #  - title: Dronkit 
+    #    url: /installation/03_dronekit
     #  - title: Layouts & Snippets
     #    url: /installation/04-layouts
     #  - title: FAQs
@@ -190,9 +190,6 @@ collections:
   raspberrypi_settings:
     output: true
     permalink: /raspberrypi_settings/:name
-  cheatsheet:
-    output: true
-    permalink: /cheatsheets/:name
 collections_dir     : collections
 permalink           : /:year:month:day_:title/
 
@@ -204,7 +201,7 @@ defaults:
       path: ""
     values:
       layout: "default"
-      header_type: "base"
+      header_type         : "base"
       include_on_search   : false
       cloudtag_url        : /tags #This is where the link on tags would redirect
       cloudcategory_url   : /categories #This is where the link on categories would redirect
