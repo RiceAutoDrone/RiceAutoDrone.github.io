@@ -197,7 +197,7 @@ googlefonts:
 chulapa-skin: 
   highlight     :  "github" # default["default"]
   skin          :  gitdev   # Optional predefined skins
-  autothemer    :  true # Bool: Use autotheming
+  autothemer    :  true     # Bool: Use autotheming
   # vars          :    
   #   primary     :   lightskyblue #default ["#007bff"] - Bootstrap blue
     
