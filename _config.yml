@@ -100,6 +100,8 @@ navbar:
   nav:
   - title: Blog
     url: /blog
+  - title: Settings
+    url: /settings/
   - title: Flight Controller Settings
     url: /flight_controller_settings
   - title: Raspberry Pi Settings
@@ -116,6 +118,8 @@ navbar:
        url: /raspberrypi_settings/04-dronekit
   - title: Jetson Settings
     url: /jetson_settings
+  - title: Hardware 
+    url: /hardware
     #  - title: FAQs
     #    url: /raspberrypi_settings/05-faq
     #  - title: Markdown cheatsheet

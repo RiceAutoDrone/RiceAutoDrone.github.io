@@ -28,7 +28,7 @@ After the initial setup, you should see the following screen:
 
 After successfully logging into the desktop, we recommend completing the following steps for later use:
 
-### 1. Increasing swap memory:
+### 1. Increasing swap memory
 
 ```
 git clone https://github.com/JetsonHacksNano/resizeSwapMemory
@@ -38,7 +38,7 @@ cd resizeSwapMemory
 
 After executing the above command, you'll have to **reboot** the Jetson Nano for the changes to take effect.
 
-### 2. Installing prerequisites and configuring your Python environment:
+### 2. Installing prerequisites and configuring your Python environment
 
 Now that the Jetson Nano is ready to go, we will create a deep learning environment. We will start by installing all prerequisites and configuring a Python environment, and how to code remote using VSCode Remote SSH.
 
@@ -51,7 +51,7 @@ sudo apt-get install git cmake python3-dev nano
 sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev
 ```
 
-### 3. Configuring your Python environment:
+### 3. Configuring your Python environment
 
 Next, we will configure our Python environment. This includes downloading pip3 and virtualenv.
 
@@ -83,7 +83,7 @@ mkvirtualenv ml -p python3
 workon ml
 ```
 
-### 4. Coding remote with Visual Studio Code:
+### 4. Coding remote with Visual Studio Code
 
 If you are like me and hate writing long scripts in nano or vim, the VSCode remote development plugin is for you. It allows you to develop remotely inside VSCode by establishing an SSH remote connection.
 To use VSCode remote development, you'll first have to install the remote development plugin. After that, you need to create an SSH-Key on your local machine and then copy it over to the Jetson Nano.
@@ -100,7 +100,7 @@ Now you only need to add the SSH Host. Ctrl + Shift + P -> Remote SSH: Connect t
 ![SSH Host](https://gilberttanner.com/content/images/2020/03/grafik-5.png)
 ![VSCode SSH](https://gilberttanner.com/content/images/2020/08/vscode_remote_control.PNG)
 
-### 5. Install jetson-stats:
+### 5. Install jetson-stats
 
 **jetson-stats** is a package for **monitoring** and **control** your [NVIDIA Jetson](https://developer.nvidia.com/buy-jetson) [Orin, Xavier, Nano, TX] series.
 
@@ -127,10 +127,10 @@ Start jtop it's pretty simple just write `jtop`!
 jtop
 ```
 
-### 6. Install OpenCV:
+### 6. Install OpenCV
 Installing OpenCV on the Jetson Nano can be a bit more complicated, but frankly, [JetsonHacks.com](https://jetsonhacks.com/) has a great guide, or see the tutorial from [Q-engineering](https://qengineering.eu/install-opencv-4.5-on-jetson-nano.html).
 
-### 7. Install PyTorch:
+### 7. Install PyTorch
 
 Since JetPack 4.6 has Python 3.6, you cannot install PyTorch 1.11.0 on a Jetson Nano.
 
