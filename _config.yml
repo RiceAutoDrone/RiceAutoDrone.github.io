@@ -103,7 +103,7 @@ navbar:
   - title: Flight Controller Settings
     url: /flight_controller_settings
   - title: Raspberry Pi Settings
-    url: /raspberrypi_settings
+    url: /raspberrypi_settings/
     child:
      - title: Access Point
        url: /installation/01_access_point
