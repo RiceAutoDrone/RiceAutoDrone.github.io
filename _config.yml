@@ -106,7 +106,7 @@ navbar:
     url: /raspberrypi_settings/
     child:
      - title: Access Point
-       url: /installation/01_access_point
+       url: /raspberrypi_settings/01_access_point
     #  - title: Global Settings
     #    url: /installation/02-config
     #  - title: Theming your site

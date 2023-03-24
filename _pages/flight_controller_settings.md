@@ -11,7 +11,7 @@ show_toc: true
 ---
 
 # Setting up the flight controller
-![Reference]https://ardupilot.org/dev/docs/raspberry-pi-via-mavlink.html
+[Reference](https://ardupilot.org/dev/docs/raspberry-pi-via-mavlink.html)
 
 Connect to the flight controller with a ground station (i.e. Mission Planner) and set the following parameters:
 

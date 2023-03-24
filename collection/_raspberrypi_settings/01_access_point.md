@@ -5,7 +5,7 @@ excerpt: Access Point Settings
 show_toc: true
 ---
 
-![Reference]https://www.raspberrypi.com/documentation/computers/configuration.html#setting-up-a-routed-wireless-access-point
+[Reference](https://www.raspberrypi.com/documentation/computers/configuration.html#setting-up-a-routed-wireless-access-point)
 
 
 # 1. Install AP and Management Software
