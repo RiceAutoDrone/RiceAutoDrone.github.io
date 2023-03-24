@@ -91,37 +91,91 @@ comments:
 #   "brand" options would be set on the left side of your navbar
 #   "nav" would be set on the right side. Two-level nav links available
 navbar:
-  style     :  #default is the classical top navbar, set "fab" for a floating action button navbar or "dual"
+  style     :  fab  #default is the classical top navbar, set "fab" for a floating action button navbar or "dual"
   expand    :  # At which device size expand the navbar menu. default[md] https://getbootstrap.com/docs/4.5/layout/overview/
   brand:
     title   :  Home # Title in navbar
     url     :  # default["url/baseurl"]
     img     :  # An small image, try 30x30px
   nav:
-  - title   : Blog # Label
-    url     : /blog/ # url	
-  - title   : Cheatsheets
-    url     : /cheatsheets
-  - title   : Extras
-    child   :
-      - title : Tags
-        url   : /tags
-      - title : Categories
-        url   : /categories
-      - title : Archive
-        url   : /archive
-      - title : Current skin
-        url   : /current-skin
-  # - title   : Docs
-  #   url     : https://dieghernan.github.io/chulapa/docs/01-install
-  # - title   : Use this template
-  #   url     : https://github.com/dieghernan/chulapa-101/generate
-  - title   : Hi # Label submenu
-    child   :		
-      - title : Hi2  # Child label		
-        url   : # child url	
-      - title : Hi3  # Child label		
-        url   : # child url	
+  - title: Blog
+    url: /blog/
+  - title: Docs
+    child:
+     - title: Read the Docs
+       url: /docs
+     - title: Installation
+       url: /docs/01-install
+     - title: Global Settings
+       url: /docs/02-config
+     - title: Theming your site
+       url: /docs/03-theming
+     - title: Layouts & Snippets
+       url: /docs/04-layouts
+     - title: FAQs
+       url: /docs/05-faq
+     - title: Markdown cheatsheet
+       url: /docs/markdown-cheatsheet
+     - title: Syntax highlighting
+       url: /docs/syntax-highlighting
+     - title: Variable dictionary
+       url: /docs/variable-dictionary
+  # - title: Skins
+  #   url: /skins
+  # - title: Demos
+  #   child:
+  #    - title: Index
+  #      url: /demo
+  #    - title: Archive (all)
+  #      url: /demo/archive
+  #    - title: Tag Cloud (2 cols)
+  #      url: /demo/tags
+  #    - title: Category Cloud (single)
+  #      url: /demo/category
+  #    - title: Search Google CSE
+  #      url: /demo/search_google
+  #    - title: Search LUNR
+  #      url: /demo/search_lunr
+  #    - title: Classic Navbar
+  #      url: /demo/classic-navbar
+  # - title: PageSpeed Results
+  #   url:  /pagespeed
+  - title: About
+    child:
+      - title: License
+        url: /license
+      # - title: Showcase
+      #   url: /showcase
+      # - title: Contribute
+      #   url: /contribute
+      # - title: Changelog
+      #   url: https://github.com/dieghernan/chulapa/blob/master/CHANGELOG.md
+  
+  # nav:
+  # - title   : Blog # Label
+  #   url     : /blog/ # url	
+  # - title   : Cheatsheets
+  #   url     : /cheatsheets
+  # - title   : Extras
+  #   child   :
+  #     - title : Tags
+  #       url   : /tags
+  #     - title : Categories
+  #       url   : /categories
+  #     - title : Archive
+  #       url   : /archive
+  #     - title : Current skin
+  #       url   : /current-skin
+  # # - title   : Docs
+  # #   url     : https://dieghernan.github.io/chulapa/docs/01-install
+  # # - title   : Use this template
+  # #   url     : https://github.com/dieghernan/chulapa-101/generate
+  # - title   : Hi # Label submenu
+  #   child   :		
+  #     - title : Hi2  # Child label		
+  #       url   : # child url	
+  #     - title : Hi3  # Child label		
+  #       url   : # child url	
 
 #Social links to be placed on your site footer
 footer:
