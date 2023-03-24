@@ -1,6 +1,7 @@
 ---
 title: Access Point
 subtitle: Set Access Point for ssh connection 
+permalink: /raspberrypi_settings/01_access_point
 excerpt: Access Point Settings
 show_toc: true
 ---
