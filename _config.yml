@@ -114,6 +114,8 @@ navbar:
        url: /raspberrypi_settings/03-git
      - title: Dronkit
        url: /raspberrypi_settings/04-dronekit
+  - title: Jetson Settings
+    url: /jetson_settings
     #  - title: FAQs
     #    url: /raspberrypi_settings/05-faq
     #  - title: Markdown cheatsheet
