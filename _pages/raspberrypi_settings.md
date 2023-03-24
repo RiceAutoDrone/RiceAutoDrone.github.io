@@ -1,7 +1,7 @@
 ---
 layout: indexcategory
 title: 'Raspberry Pi Settings'
-subtitle: Read the documentation
+# subtitle: Read the documentation
 permalink: /raspberrypi_settings
 include_collection: raspberrypi_settings
 header_type: "hero"
@@ -10,5 +10,3 @@ og_image: /assets/img/site/banner-docs.png
 index_sort_asc: true
 index_items: 20
 ---
-
-
