@@ -101,9 +101,7 @@ navbar:
   - title: Blog
     url: /blog/
   - title: Flight Controller Settings
-    child:
-     - title: Flight Controller Settings Landing Page
-       url: /flight_controller_settings
+    url: /flight_controller_settings
   - title: Installation
     child:
      - title: Installation Landing Page
