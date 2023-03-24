@@ -103,23 +103,23 @@ navbar:
   - title: Docs
     child:
      - title: Read the Docs
-       url: /docs
+       url: /installation
      - title: Installation
-       url: /docs/01-install
-     - title: Global Settings
-       url: /docs/02-config
-     - title: Theming your site
-       url: /docs/03-theming
-     - title: Layouts & Snippets
-       url: /docs/04-layouts
-     - title: FAQs
-       url: /docs/05-faq
-     - title: Markdown cheatsheet
-       url: /docs/markdown-cheatsheet
-     - title: Syntax highlighting
-       url: /docs/syntax-highlighting
-     - title: Variable dictionary
-       url: /docs/variable-dictionary
+       url: /installation/01-install
+    #  - title: Global Settings
+    #    url: /installation/02-config
+    #  - title: Theming your site
+    #    url: /installation/03-theming
+    #  - title: Layouts & Snippets
+    #    url: /installation/04-layouts
+    #  - title: FAQs
+    #    url: /installation/05-faq
+    #  - title: Markdown cheatsheet
+    #    url: /installation/markdown-cheatsheet
+    #  - title: Syntax highlighting
+    #    url: /installation/syntax-highlighting
+    #  - title: Variable dictionary
+    #    url: /installation/variable-dictionary
   # - title: Skins
   #   url: /skins
   # - title: Demos
