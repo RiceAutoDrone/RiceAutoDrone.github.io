@@ -14,7 +14,6 @@ var store = [{
         "url": "http://localhost:4000/archive",
         "img": null
       },{
-<<<<<<< HEAD
         "title": "<span>Software Settings</span>",
         "subtitle": null,
         "excerpt":
@@ -24,17 +23,6 @@ var store = [{
         "tags": null,
         "url": "http://localhost:4000/settings/",
         "img": null
-=======
-        "title": "<span class=\"chulapa\">Rice Autodrone</span>",
-        "subtitle": "A MECE Capstone Project",
-        "excerpt":
-            "        Latest release   v1.0.1     Read the docs       Easy to install   Download pre-installed images to deploy on RPi in minutes!  ",
-        "categories": null,
-        "date": null,
-        "tags": null,
-        "url": "http://localhost:4000/",
-        "img": "http://localhost:4000/assets/image/drone.png"
->>>>>>> ver-1.0
       },{
         "title": "First post!",
         "subtitle": null,
@@ -177,11 +165,7 @@ var store = [{
         "img": null
       },{
         "title": "Git",
-<<<<<<< HEAD
         "subtitle": "Setup git",
-=======
-        "subtitle": "Install Git",
->>>>>>> ver-1.0
         "excerpt":
             "Reference https://singleboardbytes.com/649/use-github-raspberry-pi.htm Setup the RPi Software (Dronekit) Install Launch the Terminal and execute the command below to update the system. sudo apt update sudo apt upgrade Execute the command below...",
         "categories": [],

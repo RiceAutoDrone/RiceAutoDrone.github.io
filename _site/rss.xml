@@ -7,8 +7,8 @@
 		<description>A MECE Capstone Project</description>
 		<language>en-US</language>
 		<copyright>(c) 2023, Yu Che Lin</copyright>	
-		<pubDate>Tue, 28 Mar 2023 15:08:45 -0500</pubDate>
-		<lastBuildDate>Tue, 28 Mar 2023 15:08:45 -0500</lastBuildDate>
+		<pubDate>Tue, 28 Mar 2023 15:10:30 -0500</pubDate>
+		<lastBuildDate>Tue, 28 Mar 2023 15:10:30 -0500</lastBuildDate>
 		<category>blog</category>
 		<ttl>60</ttl>
 		<atom:link href="http://localhost:4000/rss.xml" rel="self" type="application/rss+xml" />
