@@ -1,0 +1,14 @@
+html{
+	background: #1D1D1D;
+}
+
+header{
+	padding: 10px 0;
+	background: #1D1D1D;
+	color: #ffffff;
+}
+
+header a{
+	text-decoration: none;
+	color: #f0eeee;
+}

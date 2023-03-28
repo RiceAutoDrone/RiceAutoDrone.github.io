@@ -1,0 +1,26 @@
+body {
+	font-family: "Source Sans Pro", sans-serif;
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+}
+
+h1 {
+	padding: 0;
+	margin: 0;
+	font-size: 200px;
+	font-weight: normal;
+	text-align: center;
+}
+
+h2 {
+	padding: 0;
+	margin: 0;
+	font-size: 60px;
+	text-align: center;
+}
+
+h3 {
+	font-size: 1.8em;
+	font-weight: normal;
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <title>Load Image</title>
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700" media="all">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+	<body>
+		<header>
+    <div class="container">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <!-- <li><a href="/settings/01-access-point.html">Software</a></li> -->
+                <li><a href="/settings/">Settings</a></li>
+                <li><a href="/about/">About</a></li>
+            </ul>
+        </nav>
+        <h3><a href="/">Rice<strong>Autodrone</strong></a></h3>
+    </div>
+</header>
+		<div class="content">
+			<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Load Image</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="reference">Reference</h2>
+<p><a href="https://arstechnica.com/civis/threads/copy-an-8g-pi-card-to-32g-card.1431855/">https://arstechnica.com/civis/threads/copy-an-8g-pi-card-to-32g-card.1431855/</a></p>
+
+<h3 id="important">Important</h3>
+<p>To load image onto a SD card bigger then 8G, please do the following configuration.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># To check memory space match the SD card storage space.
+df -h
+</code></pre></div></div>
+
+<p>If not, got to configuration</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo raspi-config
+</code></pre></div></div>
+
+<p>“Advanced Option” -&gt; “Expand filesystem” -&gt; “Yes”</p>
+
+<p>This will prevent errors such as</p>
+
+<p><strong>Could not install packages due to an EnvironmentError: [Errno 28] No space left on device</strong></p>
+
+<p>ERROR: Command errored out with exit status 1: 
+sudo apt-get install python3-scipy</p>
+
+<p>ERROR: Could not find a version that satisfies the requirement torch&gt;=1.7.0
+ERROR: No matching distribution found for torch&gt;=1.7.0
+pip install torch==1.7.0 -f https://download.pytorch.org/whl/torch_stable.html</p>
+
+  </div>
+
+</article>
+
+		</div>
+	</body>
+	<footer>
+    <div class="container">
+        <p class="center-text"> <a href="https://www.linkedin.com/in/eric2678/">Created by Yu Che Lin</a></p>
+    </div>
+</footer>
+</html>

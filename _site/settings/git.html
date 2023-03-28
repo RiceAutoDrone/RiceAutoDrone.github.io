@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <title>Git</title>
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700" media="all">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+	<body>
+		<header>
+    <div class="container">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <!-- <li><a href="/settings/01-access-point.html">Software</a></li> -->
+                <li><a href="/settings/">Settings</a></li>
+                <li><a href="/about/">About</a></li>
+            </ul>
+        </nav>
+        <h3><a href="/">Rice<strong>Autodrone</strong></a></h3>
+    </div>
+</header>
+		<div class="content">
+			<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Git</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="reference">Reference</h2>
+<p><a href="https://singleboardbytes.com/649/use-github-raspberry-pi.htm">https://singleboardbytes.com/649/use-github-raspberry-pi.htm</a></p>
+
+<h2 id="setup-the-rpi-software-dronekit">Setup the RPi Software (Dronekit)</h2>
+<h3 id="install">Install</h3>
+<p>Launch the Terminal and execute the command below to update the system.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt update
+sudo apt upgrade
+</code></pre></div></div>
+
+<p>Execute the command below to install Git.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install git
+</code></pre></div></div>
+
+<p>From the image above, Git is already installed in the system. You can check the version using the command below:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git --version
+</code></pre></div></div>
+
+<h3 id="configure-git">Configure Git</h3>
+<p>Now that we have Git installed, we need to link it to our Github account. You will be required to enter your Github username and email. Use the commands below:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "Github_username"
+git config --global user.email "Github_Email"
+</code></pre></div></div>
+
+<p>Remember to replace the username and email above accordingly. To check whether you have entered the correct details, use the command below:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --list
+</code></pre></div></div>
+
+<h3 id="cheatsheet">Cheatsheet</h3>
+<p>Following is a cheatsheet for common use command</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+
+git add &lt;file name&gt;
+git add *
+
+git rm --cached
+git rm --cached index.css
+
+git commit -m "message"
+git commit -a
+
+git push
+</code></pre></div></div>
+
+<h2 id="checkpoint">Checkpoint</h2>
+<ul>
+  <li><a href="">Image</a></li>
+</ul>
+
+  </div>
+
+</article>
+
+		</div>
+	</body>
+	<footer>
+    <div class="container">
+        <p class="center-text"> <a href="https://www.linkedin.com/in/eric2678/">Created by Yu Che Lin</a></p>
+    </div>
+</footer>
+</html>

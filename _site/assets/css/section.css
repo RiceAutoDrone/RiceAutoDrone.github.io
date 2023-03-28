@@ -1,0 +1,12 @@
+section.hero {
+	color: #fff;
+	background-image: url('/assets/img/drone.jpg');
+	background-size: cover;
+	padding: 120px 0;
+}
+
+section.hero a{
+	text-decoration: none;
+	color: #f0eeee;
+}
+
