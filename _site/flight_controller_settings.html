@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700" media="all">
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+          </ul>
+        </nav>
+        <h1><a href="/">Bakery<strong>Store</strong></a></h1>
+      </div>
+    </header>
+
+    <div class="content">
+      <h1 id="setting-up-the-flight-controller">Setting up the flight controller</h1>
+<p><a href="https://ardupilot.org/dev/docs/raspberry-pi-via-mavlink.html">Reference</a></p>
+
+<p>Connect to the flight controller with a ground station (i.e. Mission Planner) and set the following parameters:</p>
+
+<ol>
+  <li>
+    <p>To enable MAVLink 2 on the serial port, set</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> SERIAL2_PROTOCOL = 2 (the default)
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>To communicate with the RPi at 921600 baud, set</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SERIAL2_BAUD = 921
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Finally, if you are using APSync to stream the dataflash log files to the RPi, set</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LOG_BACKEND_TYPE = 3
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+    </div>
+    
+    <footer>
+      <div class="container">
+        <p class="center-text"> <a href="http://cloudcannon.com">Created by CloudCannon</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

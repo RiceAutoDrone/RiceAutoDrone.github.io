@@ -1,6 +1,6 @@
 ---
 title: Git
-subtitle: Install Git 
+subtitle: Setup git 
 excerpt: Git Settings
 show_toc: true
 ---

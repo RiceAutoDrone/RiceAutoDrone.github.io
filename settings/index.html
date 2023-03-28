@@ -1,0 +1,42 @@
+---
+layout: default
+title: '<span>Software Settings</span>'
+excerpt: Jekyll template for fast creation of free site on Github Pages. Based on Bootstrap and shipped with lots of features
+include_on_search: true
+---
+{% assign page_category = layout.data.category_list[page.category] %}
+
+  {% include_relative _includes/header-home.html %}
+    <div class="container-full">
+      <div class="container grid-xl">
+        <div class="columns negative-m-s">
+          <div class="column col-12 text-center">
+            <h6 class="text-secondary">Select a Category</h6>
+          </div>
+          {% for category in layout.data.category_list %}
+          {% capture category_name %}{{ category | first }}{% endcapture %}
+          {% assign page_category = layout.data.category_list[category_name] %}
+          <div class="column col-12 text-center">
+            <h6 class="text-secondary">{{category}}</h6>
+          </div>
+          <div class="column col-4 col-md-6 col-sm-12">
+            <a href="{{ site.baseurl }}/settings/{{ category_name | slugify }}">
+              <div class="card card-link">
+                <div class="card-body text-center my-4">
+                  <h5 class="text-bold">{{ page_category.name }}</h5>
+                      
+                  {% if category[1].size == 1 %}
+                  <p class="m-0">{{ category | last | size }} article</p>
+                  {% else %}
+                  <p class="m-0">{{ category | last | size }} articles</p>
+                  {% endif %}
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endfor %} 
+
+          <!-- {% include_relative _includes/more-help.html %} -->
+        </div>
+      </div>
+    </div>
