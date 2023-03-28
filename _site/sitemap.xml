@@ -50,35 +50,19 @@
 </url>
 <url>
 <loc>http://localhost:4000/raspberrypi_settings/01-access-point</loc>
-<<<<<<< HEAD
-<lastmod>2023-03-28T01:30:10-05:00</lastmod>
+<lastmod>2023-03-28T15:08:45-05:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/raspberrypi_settings/02-mavproxy</loc>
-<lastmod>2023-03-28T01:30:10-05:00</lastmod>
+<lastmod>2023-03-28T15:08:45-05:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/raspberrypi_settings/03-git</loc>
-<lastmod>2023-03-28T01:30:10-05:00</lastmod>
+<lastmod>2023-03-28T15:08:45-05:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/raspberrypi_settings/04-dronekit</loc>
-<lastmod>2023-03-28T01:30:10-05:00</lastmod>
-=======
-<lastmod>2023-03-28T14:58:19-05:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/raspberrypi_settings/02-mavproxy</loc>
-<lastmod>2023-03-28T14:58:19-05:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/raspberrypi_settings/03-git</loc>
-<lastmod>2023-03-28T14:58:19-05:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/raspberrypi_settings/04-dronekit</loc>
-<lastmod>2023-03-28T14:58:19-05:00</lastmod>
->>>>>>> ver-1.0
+<lastmod>2023-03-28T15:08:45-05:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/archive</loc>
@@ -100,7 +84,6 @@
 <loc>http://localhost:4000/hardware</loc>
 </url>
 <url>
-<<<<<<< HEAD
 <loc>http://localhost:4000/blog/</loc>
 </url>
 <url>
@@ -108,12 +91,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/settings/</loc>
-=======
-<loc>http://localhost:4000/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/blog/</loc>
->>>>>>> ver-1.0
 </url>
 <url>
 <loc>http://localhost:4000/jetson_settings</loc>
@@ -136,11 +113,4 @@
 <url>
 <loc>http://localhost:4000/blog/page3/</loc>
 </url>
-<<<<<<< HEAD
-=======
-<url>
-<loc>http://localhost:4000/develop/settings/</loc>
-<lastmod>2023-03-28T14:52:23-05:00</lastmod>
-</url>
->>>>>>> ver-1.0
 </urlset>

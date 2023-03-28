@@ -43,7 +43,7 @@ We also provides images of RPi for lazy purpose.
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2023-03-28 14:58:19 -0500 -->
+    <!-- Page build 2023-03-28 15:07:47 -0500 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -55,8 +55,8 @@ We also provides images of RPi for lazy purpose.
       },
       "headline": "Rice Autodrone",
       "image": "https://riceautodrone.github.io/assets/image/drone.jpg",
-      "datePublished": "2023-03-28T14:58:19-05:00",
-      "dateModified": "2023-03-28T14:58:19-05:00",
+      "datePublished": "2023-03-28T15:07:47-05:00",
+      "dateModified": "2023-03-28T15:07:47-05:00",
       "author": {
         "@type": "Person",
         "name": "Yu Che Lin"

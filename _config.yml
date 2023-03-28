@@ -229,7 +229,6 @@ defaults:
       show_bottomnavs   : true
       show_comments     : true
   -
-  -
     scope:
       path: ""
       type: "posts"
