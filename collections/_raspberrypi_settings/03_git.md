@@ -1,7 +1,7 @@
 ---
-title: Dronekit
-subtitle: Set Dronekit to control the drone 
-excerpt: Dronekit Settings
+title: Git
+subtitle: Setup git 
+excerpt: Git Settings
 show_toc: true
 ---
 
