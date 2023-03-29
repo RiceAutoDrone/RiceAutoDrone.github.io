@@ -1,0 +1,24 @@
+<div id="jumbotron">
+    {%- if page.home -%}
+    <div class="jumbotron-home mb-0 d-flex align-items-center flex-column justify-content-center text-center min-100 jumbotron-bg" id="header">
+        <section class="hero">
+            <div class="small-container">
+                <h1>{{page.title}}</h1>
+                <p class="sub-text">{{page.subtitle}}</p>
+            </div>
+            <p class="lead">
+                <a class="btn btn-outline-light btn-lg" href="https://github.com/Rice-MECE-Capstone-Projects/Autodrone" role="button">Follow</a>
+            </p>
+        </section>
+    </div>
+    {%- else -%}
+    <div class="jumbotron-other mb-0 d-flex align-items-center flex-column justify-content-center text-center min-100 jumbotron-bg" id="header">
+        <section class="hero">
+            <div class="small-container">
+                <h1>{{page.title}}</h1>
+                <p class="sub-text">{{page.subtitle}}</p>
+            </div>
+        </section>
+    </div>
+    {%- endif -%}
+</div>

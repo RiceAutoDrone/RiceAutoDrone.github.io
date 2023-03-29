@@ -11,24 +11,6 @@ img {
 	height: auto;
 }
 
-div.container,
-div.small-container {
-	margin: 0 auto;
-	padding: 0 20px;
-}
-
-div.container {
-	max-width: 940px;
-}
-
-div.small-container {
-	max-width: 700px;
-}
-
-div.content {
-	background: #fff;
-}
-
 p.post-hero {
 	width: 80%;
 	margin: 0 auto;
@@ -43,7 +25,7 @@ p.sub-text {
 .center-text {
 	text-align: center;
 	color: #ffffff;
-	background-color: #302d2d;
+    background-color: #5a5a56;
 }
 
 /* .columns:after {

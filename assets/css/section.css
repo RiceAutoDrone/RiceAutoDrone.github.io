@@ -1,8 +1,8 @@
 section.hero {
 	color: #fff;
-	background-image: url('/assets/img/drone.jpg');
-	background-size: cover;
-	padding: 120px 0;
+	/* background-image: url('/assets/img/drone.jpg'); */
+	/* background-size: cover; */
+	/* padding: 300px 0; */
 }
 
 section.hero a{
@@ -10,3 +10,7 @@ section.hero a{
 	color: #f0eeee;
 }
 
+section.category{
+	padding: 20px;
+    background-color: #5a5a56;
+}

@@ -1,11 +1,15 @@
 <!doctype html>
 <html lang="en">
-	{% include head.html%}
+	{% include navbar.html%}
+	{% include jumbotron.html %}
 	<body>
-		{% include navbar.html%}
-		<div class="content">
-			{{ content }}
+		<div id="page-container">
+			<div id="content-wrap">
+				{{ content }}
+			</div>
+			<footer id="footer">
+				{% include footer.html%}
+			</footer>
 		</div>
 	</body>
-	{% include footer.html%}
 </html>

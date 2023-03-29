@@ -2,10 +2,15 @@ footer {
 	padding: 10px 0;
 	background: #1D1D1D;
 	color: #ffffff;
+	background-color: #000000;
 }
 
 footer a {
 	text-decoration: none;
-	background: #1D1D1D;
+	background: #000000;
 	color: #f0eeee;
+}
+
+footer p {
+	text-align: center;
 }

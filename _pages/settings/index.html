@@ -1,15 +1,13 @@
 ---
-layout: page_index
+layout: default
 title: Software Settings
 permalink: settings/
 ---
-
-<!-- <h2>{{site.data.setting_catagory_list}}</h2> -->
-<section id="posts" class="mt-3">
+<section class="category">
 	<div class="container">
 	  	<div class="row">
 			<div class="column col-12 text-center">
-				<h5 class="text-secondary">Select a Category</h5>
+				<h3 class="category">Select a Category</h3>
 			</div>
 			{% for setting_catagory in site.data.setting_catagory_list %}
 			{% capture setting_catagory_name %}{{ setting_catagory | first }}{% endcapture %}
@@ -17,7 +15,7 @@ permalink: settings/
 			{% assign setting_category_image = setting_category.image %}
 			<div class="col mb-4 card-group">
 				<div class="card">
-					<img class="card-img-top" src="{{ setting_category_image | relative_url }}" alt="Card Text" height="400">
+					<img class="card-img-top" src="{{ setting_category_image | relative_url }}" alt="Card Text">
 					<div class="card-body pt-2">
 						<h4 class="card-title">
 							<a href="/settings/{{ setting_catagory_name }}">{{ setting_category.name }}</a>
@@ -25,22 +23,6 @@ permalink: settings/
 					</div>
 				</div>
 			</div>
-
-
-			<!-- <div class="column col-4 col-md-6 col-sm-12">
-				<a href="/settings/{{ setting_catagory_name }}">
-					<div class="card card-link">
-						<div class="card-body text-center my-4">
-							<h5 class="text-bold">{{ setting_category.name }}</h5>
-							{% if setting_catagory[1].size == 1 %}
-							<p class="m-0">{{ setting_catagory | last | size }} article</p>
-							{% else %}
-							<p class="m-0">{{ setting_catagory | last | size }} articles</p>
-							{% endif %}
-						</div>
-					</div>
-				</a>
-			</div> -->
 			{% endfor %}
 		</div>
 	</div>

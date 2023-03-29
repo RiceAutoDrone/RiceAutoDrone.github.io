@@ -1,0 +1,28 @@
+header{
+	padding: 10px 0;
+	background: #1D1D1D;
+	/* color: #ffffff; */
+}
+
+/* color for navbar */
+header a{
+	text-decoration: none;
+    color: azure;
+	background-color: #201c1c;
+	/* color: #ffffff; */
+}
+nav.main-nav{
+    color: azure;
+	background-color: #201c1c;
+}
+nav.main-nav ul {
+	margin: 0;
+	list-style: none;
+	float: right;
+}
+
+nav.main-nav li,
+nav.main-nav a {
+	display: inline-block;
+	padding: 5px;
+}

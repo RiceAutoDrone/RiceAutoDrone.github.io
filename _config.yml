@@ -29,6 +29,11 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  riceautodrone
 
+# Algolia Search
+algolia:
+  application_id: 4P42FOBOZA # Use your (non-admin) search only api key here.
+  index_name: sakura #Use an index you created on Algolia.
+
 # Build settings
 theme: minima
 highlight: "github"
@@ -76,3 +81,8 @@ collections_dir: collections
 sass:
   sass_dir:  assets/_scss
   style:     :compressed
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
