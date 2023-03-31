@@ -30,9 +30,12 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  riceautodrone
 
 # Algolia Search
-algolia:
-  application_id: 4P42FOBOZA # Use your (non-admin) search only api key here.
-  index_name: sakura #Use an index you created on Algolia.
+# search:
+#   provider: algolia
+#   algolia_logo: true
+# algolia:
+#   application_id: 4P42FOBOZA # Use your (non-admin) search only api key here.
+#   index_name: sakura #Use an index you created on Algolia.
 
 # Build settings
 theme: minima
@@ -65,16 +68,68 @@ extensions_to_index:      #Optional
 
 
 include:
-  - _pages
+  - pages
   
+collections:
+    pages:
+       output: true
 collections_dir: collections
+permalink: /:title
+# paginate: 4
+# paginate_path: "/blog/page:num/"
+# paginator_maxnum: 3
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      header_type         : "base"
+      include_on_search   : false
+      cloudtag_url        : "/tags"
+      cloudcategory_url   : "/categories"
+      show_seo            : true
+  # -
+  #   scope:
+  #     path: ""
+  #     type: "posts"
+  #   values:
+  #     header_type       : "post"
+  #     include_on_search : true
+  #     include_on_feed   : true
+  #     show_date         : true
+  #     show_related      : true
+  #     show_bottomnavs   : true
+  #     show_sociallinks  : true
+  #     show_comments     : true
+  #     show_tags         : true
+  #     show_categories   : true
+  #     show_author       : true
+  #     show_breadcrumb   : true
+  #     breadcrumb_list   :
+  #       - label: Blog
+  #         url: /blog/
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
+kramdown:
+  input: GFM
+  syntax_highlighter: coderay
+  syntax_highlighter_opts:
+    line_numbers: table
+    bold_every: 5
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  footnote_backlink: '&uarr;'
+  entity_output: as_char
+  toc_levels: 2..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
 sass:
   sass_dir:  assets/_scss
   style:     :compressed
-
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM

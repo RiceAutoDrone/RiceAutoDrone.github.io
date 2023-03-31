@@ -15,3 +15,7 @@ div.small-container {
     background-color: #5a5a56;
 	max-width: 700px;
 }
+
+div.blog-container{
+    background-color: #ffffff;
+}
