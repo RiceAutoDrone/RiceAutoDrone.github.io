@@ -1,8 +1,8 @@
 h1 {
 	padding: 0;
 	margin: 0;
-	font-size: 200px;
-	font-weight: normal;
+	font-size: 300px;
+	font-weight: bold;
 	text-align: center;
 }
 
@@ -17,6 +17,33 @@ h3 {
 	font-size: 1.8em;
 	font-weight: normal;
 }
+
 h3.category{
 	color: azure;
+}
+
+p {
+	line-height: 1.6em;
+}
+
+a {
+	color: #000;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+p.post-hero {
+	width: 80%;
+	margin: 0 auto;
+}
+
+p.sub-text {
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 28px;
+	color:#ffffff
 }

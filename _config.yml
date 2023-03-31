@@ -67,14 +67,6 @@ extensions_to_index:      #Optional
 include:
   - _pages
   
-collections:
-  blog:
-    output:  true
-  settings:
-    hardware:
-      output:  true
-    software:
-      output:  true
 collections_dir: collections
 
 

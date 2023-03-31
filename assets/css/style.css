@@ -1,26 +1,4 @@
-p {
-	line-height: 1.6em;
-}
 
-a {
-	color: #000;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
-}
-
-p.post-hero {
-	width: 80%;
-	margin: 0 auto;
-}
-
-p.sub-text {
-	font-size: 20px;
-	text-align: center;
-	line-height: 28px;
-}
 
 .center-text {
 	text-align: center;
