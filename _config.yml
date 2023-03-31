@@ -222,6 +222,15 @@ defaults:
   -
     scope:
       path: ""
+      type: "jetson"
+    values:
+      header_type       : "hero"
+      include_on_search : true
+      show_bottomnavs   : true
+      show_comments     : true
+  -
+    scope:
+      path: ""
       type: "posts"
     values:
       header_type       : "post"
