@@ -31,4 +31,4 @@ codekit-config.json
 .jekyll-cache
 .sass-cache
 _asset_bundler_cache
-_site
+_site/*
