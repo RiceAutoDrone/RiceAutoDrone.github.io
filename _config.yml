@@ -1,18 +1,26 @@
-remote_theme: dieghernan/chulapa
-
 # Find errors on this file with http://www.yamllint.com/
 
 # Chulapa docs: https://dieghernan.github.io/chulapa/docs/02-config
+
+# XX. Installing Chulapa
+
+# With remote theme
+remote_theme: dieghernan/chulapa
+
+# With gem based method do this instead
+# theme: chulapa-jekyll
+# And at this to your Gemfile
+# gem install 'chulapa-jekyll'
+
 
 # A. Site Settings /SEO options
 # Overall options for your site, would affect your site SEO
 # Default values are explained
 locale                  :     #default["en-US"] format language-TERRITORY , e.g fr, en-GB, es-MX, pt-BR
-title                   :     Rice Autodrone    #default["repository_name"]
+title                   :     Rice AutoDrone #default["repository_name"]
 title_separator         :     #default [" | "]
-subtitle                :     A MECE Capstone Project     #default [your-repository-tagline]  
-description             :     A MECE Capstone Project     #default [your-repository-tagline]
-# og_image                :     "https://riceautodrone.github.io/assets/img/drone.jpg"
+subtitle                :     A MECE Capstone Project #default [your-repository-tagline]
+description             :     A MECE Capstone Project #default [your-repository-tagline]
 url                     :     #See baseurl - On Github Pages you may leave it blank - If you use CNAME use your domain
 baseurl                 :     #On Github Pages you may leave it blank. Have a look to: https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/
 words_per_minute        :     #default[200]
@@ -22,167 +30,121 @@ timezone                :     #"Europe/Madrid ,see https://jekyllrb.com/docs/con
 og_image                :     #default[author.avatar (see below)] or [github-avatar]
 twitter_site            :     #Avoid @
 author:
-  name                  :     Yu Che Lin   # Name Surname Company
+  name                  :     Yu Che Lin # Name Surname Company
   avatar                :     # Try a square file. Info: Your github avatar on https://github.com/[USERNAME].png
-  location              :     "Houston, TX, US"   # New York, USA 
-#  links:                
-#    - url:  #A link or email: https://twitter.com/jack, mail@example.com
-#      icon: # A Fontawesome 5 code: fab fa-twitter - see https://fontawesome.com/
-#    - url:  # Another link
-#      icon: # Anothet FontAwesome code
+  location              :     Houston, TX # New York, USA
+  links:
+    - url:  #A link or email: https://twitter.com/jack, mail@example.com
+      icon: # A Fontawesome code: fab fa-twitter - see https://fontawesome.com/
+      label: # A Label for the icon: Twitter
+    - url:  # Another link
+      icon: # Another FontAwesome code
+      label: # Another label
 
 fa_version: #default ["6"] Use 6 or 5
-fa_kit_code: # Your FontAwesome kit code. If not provided a free hosted version (slower) will be loaded:  https://fontawesome.com/ 
-fa_v4_support: #Bool Add FontAwesome 4 support 
+fa_kit_code: # Your FontAwesome kit code. If not provided a free hosted version (slower) will be loaded:  https://fontawesome.com/
+fa_v4_support: #Bool Add FontAwesome 4 support
 # Web tracking - Google services https://analytics.google.com/analytics/web/
 # gtag_id is the preferred option, see https://developers.google.com/analytics/devguides/collection/gtagjs/migration?hl=en
 # analytics provided for backwards compatibility
-gtag_id                 :  
-analytics_id            :  
+gtag_id                 :
+analytics_id            :
 
 # Search providers
 # Available free search engines:
-# - lunr https://lunrjs.com/ 
+# - lunr https://lunrjs.com/
 # - algolia v4 https://www.algolia.com/ - needs further configuration
-# - google custom search engine https://cse.google.es/ 
+# - google custom search engine https://cse.google.es/
 search:
-  provider              : lunr #Select a provider for enable search: lunr, algolia, google
-  label                 :  #default ["Search"] Text on navbar when search is enabled 
-  landing_page          :  #default ["/search"] Link on navbar 
+  provider              : algolia #Select a provider for enable search: lunr, algolia, google
+  label                 :  #default ["Search"] Text on navbar when search is enabled
+  landing_page          :  #default ["/search"] Link on navbar
   lunr_maxwords         :  #default [30] lunr only - May slow down your site build
-  algolia_logo          :  true #Displays algolia logo. Should be set to true if you are on a community plan, otherwise false.  
+  algolia_logo          :  true #Displays algolia logo. Should be set to true if you are on a community plan, otherwise false.
 
 google_cse_id: #Your cse id
 # This site uses jekyll-algolia plugin https://community.algolia.com/jekyll-algolia/
 # Recommended additional configuration provided, could be modified. Add your own parameters
-algolia:                                                                   
-  application_id        : 
-  index_name            : 
-  search_only_api_key   : 
+algolia:
+  application_id        : #As per your Algolia account
+  index_name            : #As per your Algolia account
+  search_only_api_key   : #As per your Algolia account
   files_to_exclude:         #Optional
     - _layouts/*.html
     - _includes/*.html
+    - docs/_pages/*
+    - docs/blog/*
   extensions_to_index:      #Optional
     - html
     - md
-  searchableAttributes:     #Optional                                                    
-    - title                                                                    
-    - headings                                                                 
-    - unordered(content)                                                       
-    - unordered(subtitle)                                                      
-    - unordered(categories)                                                    
-    - unordered(collection)                                                    
-    - unordered(tags) 
+  searchableAttributes:     #Optional
+    - title
+    - headings
+    - unordered(content)
+    - unordered(subtitle)
+    - unordered(categories)
+    - unordered(collection)
+    - unordered(tags)
   customRanking:            #Optional
     - desc(include_on_search)
     - desc(title)
-    - desc(content) 
+    - desc(content)
     - desc(subtitle)
-    
+
 comments:
-  provider:         #Enable comments via Disqus, giscus or Cactus.chat
+  provider:         #Enable comments via Disqus, giscus, Cactus.chat, cusdis
   disqus_shortname: #Your site id : check your address https://{{ disqus.shortname }}.disqus.com/admin/
   cactus_shortname: #Your site id as registered with Cactus.chat
+  cusdis_app_id:    # Your cusdis app id
+  cusdis_host:      # Optionally you can use your own host
+  website_id:       # Welcomments id
   
+
+
 # B. Navigation
 # Configure your navbar and the footer of your site
 
-# Navbar: 
+# Navbar:
 #   "brand" options would be set on the left side of your navbar
 #   "nav" would be set on the right side. Two-level nav links available
 navbar:
-  style     :  fab  #default is the classical top navbar, set "fab" for a floating action button navbar or "dual"
+  style     :  #default is the classical top navbar, set "fab" for a floating action button navbar or "dual"
   expand    :  # At which device size expand the navbar menu. default[md] https://getbootstrap.com/docs/4.5/layout/overview/
   brand:
-    title   :  Home # Title in navbar
+    title   :  # Title in navbar
     url     :  # default["url/baseurl"]
     img     :  # An small image, try 30x30px
   nav:
-  - title: Blog
-    url: /blog/
-  - title: Settings
-    url: /settings/
-  - title: Flight Controller Settings
-    url: /flight_controller_settings
-  - title: Raspberry Pi Settings
+  - title   : Settings # Label
+    url     : /settings/ # url
+  - title   : # Label submenu
     child:
-     - title: Index
-       url: /raspberrypi_settings
-     - title: Access Point
-       url: /raspberrypi_settings/01-access-point
-     - title: Mavproxy
-       url: /raspberrypi_settings/02-mavproxy
-     - title: Git
-       url: /raspberrypi_settings/03-git
-     - title: Dronkit
-       url: /raspberrypi_settings/04-dronekit
-  - title: Jetson Settings
-    url: /jetson_settings
-  - title: Hardware 
-    url: /hardware
-    #  - title: FAQs
-    #    url: /raspberrypi_settings/05-faq
-    #  - title: Markdown cheatsheet
-    #    url: /raspberrypi_settings/markdown-cheatsheet
-    #  - title: Syntax highlighting
-    #    url: /raspberrypi_settings/syntax-highlighting
-    #  - title: Variable dictionary
-    #    url: /raspberrypi_settings/variable-dictionary
-  # - title: Skins
-  #   url: /skins
-  # - title: Demos
-  #   child:
-  #    - title: Index
-  #      url: /demo
-  #    - title: Archive (all)
-  #      url: /demo/archive
-  #    - title: Tag Cloud (2 cols)
-  #      url: /demo/tags
-  #    - title: Category Cloud (single)
-  #      url: /demo/category
-  #    - title: Search Google CSE
-  #      url: /demo/search_google
-  #    - title: Search LUNR
-  #      url: /demo/search_lunr
-  #    - title: Classic Navbar
-  #      url: /demo/classic-navbar
-  # - title: PageSpeed Results
-  #   url:  /pagespeed
-  - title: About
-    child:
-      - title: License
-        url: /license
-      # - title: Showcase
-      #   url: /showcase
-      # - title: Contribute
-      #   url: /contribute
-      # - title: Changelog
-      #   url: https://github.com/dieghernan/chulapa/blob/master/CHANGELOG.md
+     - title: # Child label
+       url  : # child url
+     - title: # Child label
+       url  : # child url
 
 #Social links to be placed on your site footer
 footer:
   links:
-    - label : Repo on Github # Label
-      icon  : fab fa-github # Fontawesome 5 icon
-      url   : https://github.com/RiceAutoDrone/RiceAutoDrone.github.io.git # A link or email: https://twitter.com/jack, mail@example.com
-    - label: "RSS"
-      icon: "fa fa-rss"
-      url:  "./atom.xml"
-  copyright: # default is © <year> <name> 
-  
+    - label : #Label
+      icon  : # Fontawesome 5 icon
+      url   : # A link or email: https://twitter.com/jack, mail@example.com
+  copyright: # default is © <year> <name>
+
 # C. Theme Settings
 # Google Fonts https://fonts.google.com/, add as many as you need
 googlefonts:
  # - url : # 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'
 
 # Theme and colors
-chulapa-skin: 
-  highlight     :  "github" # default["default"]
-  skin          :  gitdev   # Optional predefined skins
-  autothemer    :  true     # Bool: Use autotheming
-  # vars          :    
-  #   primary     :   lightskyblue #default ["#007bff"] - Bootstrap blue
-    
+chulapa-skin:
+  highlight     :  # default["default"]
+  skin         :  # Optional predefined skins
+  autothemer    :  # Bool: Use autotheming
+  vars          :
+    primary     :   #default ["#007bff"] - Bootstrap blue
+
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
 
 # Blog pagination: on this site /blog/index.html. https://jekyllrb.com/docs/pagination/
@@ -190,12 +152,19 @@ paginate: 4
 paginate_path: "/blog/page:num/"
 paginator_maxnum: 3  #default[3] Custom: max of number to be displayed on the paginator
 
+
 # Collections https://jekyllrb.com/docs/step-by-step/09-collections/
 collections:
-  raspberrypi_settings:
+  demo:
     output: true
-    permalink: /raspberrypi_settings/:name
-collections_dir     : collections
+    permalink: /demo/:name
+  docs:
+    output: true
+    permalink: /docs/:name
+  skins:
+    output: true
+    permalink: /skins/:name
+collections_dir     : docs/collections
 permalink           : /:year:month:day_:title/
 
 
@@ -206,28 +175,10 @@ defaults:
       path: ""
     values:
       layout: "default"
-      header_type         : "base"
+      header_type: "base"
       include_on_search   : false
-      cloudtag_url        : /tags #This is where the link on tags would redirect
-      cloudcategory_url   : /categories #This is where the link on categories would redirect
-  -
-    scope:
-      path: ""
-      type: "raspberrypi_settings"
-    values:
-      header_type       : "hero"
-      include_on_search : true
-      show_bottomnavs   : true
-      show_comments     : true
-  -
-    scope:
-      path: ""
-      type: "jetson"
-    values:
-      header_type       : "hero"
-      include_on_search : true
-      show_bottomnavs   : true
-      show_comments     : true
+      cloudtag_url        : "/tags"       #This is where the link on tags would redirect
+      cloudcategory_url   : "/categories" #This is where the link on categories would redirect
   -
     scope:
       path: ""
@@ -244,23 +195,20 @@ defaults:
       show_tags         : true
       show_categories   : true
       show_author       : true
-      show_breadcrumb   : true
-      breadcrumb_list   :
-        - label: Blog
-          url: /blog/
+      show_toc          : false
   -
     scope:
       path: ""
-      type: "cheatsheet"
+      type: "demo"
     values:
       header_type       : "hero"
+      show_related      : true
       show_bottomnavs   : true
       show_sociallinks  : true
       include_on_search : true
-      show_breadcrumb   : true
-      breadcrumb_list   :
-        - label: Cheatsheets
-          url: /cheatsheets
+      include_on_feed   : true
+
+
 
 
 # XX. Other settings - no need to modify
@@ -276,13 +224,15 @@ plugins:
   - jekyll-include-cache
   - jekyll-sitemap
 
-
 # Exclude these files from production site
 exclude:
   - LICENSE
   - README.md
   - Gemfile
   - vendor
+  - /docs # ignore Chulapa /docs
+  - /test # ignore Chulapa /test
+  - github-metrics.svg
 
 include:
  - _pages
@@ -310,4 +260,3 @@ kramdown:
 sass:
   sass_dir: _sass
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-

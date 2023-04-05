@@ -1,0 +1,38 @@
+// Some bootstrap variables
+$primary: #1da1f2 !default;
+$secondary:#788995 !default;
+$success: #17bf63 !default;
+$warning: #ffad1f !default;
+$danger: #e0245e !default;
+$info: #7B6E94 !default;
+$light: #c1c2c2 !default;
+$dark: #15181c !default;
+$black: #000 !default;
+$body-bg:$black !default;
+$body-color: $light !default;
+$hero-chulapa-bg-color:#000 !default;
+$hero-chulapa-text-color:$light !default;
+$thead-chulapa-bg-color: $primary !default;
+$blockquote-chulapa-bg-color: mix($body-bg, $primary, 80%) !default;
+$blockquote-chulapa-text-color: mix($body-color, $primary, 95%) !default;
+$pre-chulapa-bg-color: mix($body-color, $primary, 95%) !default;
+
+
+$navbar-chulapa-bg-color: $body-bg !default;
+$navbar-chulapa-text-color: $body-color !default;
+$navbar-chulapa-brand-color: $body-color !default;
+$navbar-chulapa-hover-color: $primary !default;
+$navbar-chulapa-active-color: $primary !default;
+
+$footer-chulapa-text-color: $body-color !default;
+$footer-chulapa-hover-color: $primary !default;
+
+$pagination-chulapa-bg-hover-color: $primary !default;
+
+$min-contrast-ratio: 2 !default;
+
+$breadcrumb-divider: quote(">") !default;
+
+// Lines for dark themes
+
+@import "skins/dark-bg";

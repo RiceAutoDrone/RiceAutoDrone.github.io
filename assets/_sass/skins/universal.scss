@@ -1,0 +1,82 @@
+// Adapted from Bootstrapius
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@100;300;400;500;700&display=swap");
+
+$font-family-base: "Roboto" !default;
+$font-family-monospace: "Roboto Mono" !default;
+$headings-font-weight: 700 !default;
+$body-bg: #fff !default;
+$primary: #986dbd !default;
+$green: #97bf13 !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$code-color: #E80E61 !default;
+$headings-color: #333 !default;
+$link-color: #986dbd !default;
+$navbar-chulapa-brand-color: #000 !default;
+$navbar-chulapa-bg-color: $body-bg !default;
+$navbar-chulapa-toggler-color: $primary !default;
+$navbar-chulapa-active-color: $primary !default;
+$hero-chulapa-bg-color: $primary !default;
+$hero-chulapa-text-color: black !default;
+$footer-chulapa-bg-color: #333 !default;
+$footer-chulapa-text-color: #ccc !default;
+$footer-chulapa-icon-color: #ccc !default;
+$footer-chulapa-icon-hover-color: #724599 !default;
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700 !important;
+}
+
+.splash-chulapa, .hero-chulapa, .header-chulapa {
+  color: black;
+}
+
+.header-chulapa {
+  text-align: center;
+}
+
+.chulapa-bg-landingpage header {
+  color: black !important;
+}
+
+// Remove rules
+header hr {
+  display: none;
+}
+
+
+// Navbar
+
+.navbar {
+
+   .navbar-brand {
+     font-weight: 700 !important;
+     text-transform: uppercase;
+     letter-spacing: 0.08em;
+   }
+   .navbar-nav {
+     text-transform: uppercase;
+     text-decoration: underline;
+     letter-spacing: 0.08em;
+     color: black;
+   }
+}
+
+
+// Misc
+
+th, .btn, .chulapa-toc-wrapper, .chulapa-subtitle, .breadcrumb, #markdown-toc {
+  text-transform: uppercase;
+}
+
+.language-plaintext {
+  color: $green;
+}
+
+
+a:hover, a:focus {
+    color: $footer-chulapa-icon-hover-color;
+    text-decoration: underline;
+}

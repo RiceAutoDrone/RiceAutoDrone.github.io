@@ -9,7 +9,7 @@ show_toc: true
 
 ## MIT License
 
-Copyright <span>&copy;</span> 2023 eric2678
+Copyright <span>&copy;</span> 2020 dieghernan
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -53,3 +53,4 @@ This theme uses graphic resources from [Pexels](https://www.pexels.com/@dieghern
 This theme uses graphic resources from [Lorem Picsum](https://picsum.photos/).
 
 I hereby declared not to be endorsed by any third party whose resources may have been implemented on this software. To my best knowledge, all the third-party integrations included on this software adheres to the corresponding licenses. All legal brands used on this theme are displayed for informative and/or aesthetic purposes, and the corresponding logos were obtained from [https://fontawesome.com/](https://fontawesome.com/). 
+

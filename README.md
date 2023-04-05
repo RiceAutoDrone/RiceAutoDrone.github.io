@@ -1,4 +1,5 @@
-# Rice Autodrone
+# Chulapa website
 
-This is the website that provides instruction on how to install all necessary packages/modules.
-We also provides images of RPi for lazy purpose.
+This folder contains the source code of the webpage <https://dieghernan.github.io/chulapa/>.
+
+If you are looking for the source code of the Jekyll theme Chulapa, you can find it on <https://github.com/dieghernan/chulapa>
