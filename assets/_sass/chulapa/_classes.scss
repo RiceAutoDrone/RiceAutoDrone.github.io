@@ -1,0 +1,1270 @@
+/*!
+ * Specific classes and formats for chulapa
+ */
+.chulapa {
+  font-family: chulapa, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400 !important;
+  // Enable Ligatures
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -moz-font-feature-settings: "liga", "dlig";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+  text-rendering: optimizeLegibility;
+}
+
+.chulapa-footer-brand {
+  font-size: $font-size-base * .8;
+}
+
+.chulapa-bg-transparent {
+  background-color: transparent !important;
+}
+
+.chulapa-rounded-lg {
+  @include border-radius($border-radius-lg);
+}
+
+@each $color, $value in $theme-colors {
+  .chulapa-pill-bg-#{$color} {
+    @include badge-variant($value);
+  }
+}
+
+.chulapa-pill-bg-body {
+  @include badge-variant($body-bg);
+  border-style: solid;
+  border-width: $border-width;
+  border-color: color-contrast($body-bg);
+}
+
+.chulapa-text-body-color {
+  color: $body-color !important;
+}
+
+.chulapaDateSocial {
+  color: $body-color;
+
+  a {
+    color: $body-color;
+  }
+}
+
+.chulapa-headingfont {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+}
+
+.chulapa-links-hover-only {
+  a {
+    color: inherit;
+
+    @include hover() {
+      color: $link-hover-color;
+      text-decoration: $link-hover-decoration;
+    }
+  }
+}
+
+// Navbar
+.navbar-chulapa {
+  background-color: $navbar-chulapa-bg-color;
+
+  .navbar-brand {
+    color: $navbar-chulapa-brand-color;
+    font-weight: bold;
+
+    @include hover-focus() {
+      color: $navbar-chulapa-brand-hover-color;
+    }
+  }
+
+  .btn {
+    border-color: $navbar-chulapa-text-color;
+    color: $navbar-chulapa-text-color;
+
+    @include hover-focus() {
+      color: $navbar-chulapa-hover-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-chulapa-text-color;
+
+      @include hover-focus() {
+        color: $navbar-chulapa-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-chulapa-disabled-color;
+      }
+    }
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-chulapa-active-color;
+    }
+  }
+
+  .navbar-toggler {
+    color: $navbar-chulapa-text-color;
+    border-color: $navbar-chulapa-toggler-border-color;
+    background-color: $navbar-chulapa-toggler-color-bg;
+  }
+
+  .navbar-toggler-icon {
+    background-image: escape-svg($navbar-chulapa-toggler-icon-bg);
+  }
+
+  .navbar-text {
+    color: $navbar-chulapa-text-color;
+
+    a {
+      color: $navbar-chulapa-active-color;
+
+      @include hover-focus() {
+        color: $navbar-chulapa-active-color;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    background-color: $navbar-chulapa-bg-color;
+    border-style: none;
+
+    .dropdown-item {
+      color: $navbar-chulapa-text-color;
+
+      @include hover-focus() {
+        color: $navbar-chulapa-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-chulapa-disabled-color;
+      }
+    }
+
+    .show > .dropdown-item,
+    .active > .dropdown-item,
+    .dropdown-item.show,
+    .dropdown-item.active {
+      color: $navbar-chulapa-active-color;
+      background-color: $navbar-chulapa-bg-color;
+    }
+  }
+}
+
+// Hero and headers
+.hero-chulapa {
+  font-family: $headings-font-family;
+  background-color: $hero-chulapa-bg-color;
+  text-align: center;
+  min-height: 40vh;
+
+  hr {
+    background-color: $hero-chulapa-text-color;
+    width: 15%;
+  }
+
+  h1,
+  p {
+    color: $hero-chulapa-text-color;
+    word-wrap: break-word;
+    -ms-word-wrap: break-word;
+  }
+
+  p {
+    @include fluid-type(
+      font-size,
+      breakpoint-min("md"),
+      breakpoint-min("lg"),
+      1.5 * $font-size-base,
+      2 * $font-size-base
+    );
+  }
+
+  .chulapa-btn-project {
+    border-color: $hero-chulapa-text-color;
+    color: $hero-chulapa-text-color;
+    @include fluid-type(
+      font-size,
+      breakpoint-min("md"),
+      breakpoint-min("lg"),
+      $font-size-base,
+      $font-size-lg
+    );
+    @include hover-focus() {
+      border-color: $hero-chulapa-text-color;
+      color: $hero-chulapa-bg-color;
+      background-color: $hero-chulapa-text-color;
+      text-shadow: none;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .hero-chulapa h1 {
+    font-size: $display4-size;
+    font-weight: $display4-weight;
+  }
+
+  .hero-chulapa p {
+    font-weight: $display4-weight;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .hero-chulapa h1 {
+    font-size: $display3-size;
+  }
+}
+
+.hero-chulapa-image {
+  @extend .hero-chulapa;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  h1,
+  p {
+    color: $white;
+    text-shadow: 0.1rem 0.1rem 0.2rem $black;
+  }
+
+  hr {
+    background-color: $white;
+    box-shadow: 0.1rem 0.1rem 0.2rem $black;
+  }
+
+  .chulapa-btn-project {
+    color: $white;
+    border-color: $white;
+    text-shadow: none;
+    @include hover-focus() {
+      border-color: $light;
+      color: $light;
+      background-color: $dark;
+      text-shadow: none;
+    }
+  }
+}
+
+.splash-chulapa {
+  @extend .hero-chulapa;
+  min-height: 100vh;
+
+  h1,
+  p {
+    font-weight: $display1-weight;
+  }
+
+  h1 {
+    @include fluid-type(
+      font-size,
+      breakpoint-min("md"),
+      breakpoint-min("lg"),
+      $font-size-base * 3,
+      $display1-size
+    );
+  }
+
+  p {
+    @include fluid-type(
+      font-size,
+      breakpoint-min("md"),
+      breakpoint-min("lg"),
+      $font-size-base * 1.5,
+      $h1-font-size
+    );
+  }
+}
+
+.splash-chulapa-image {
+  @extend .splash-chulapa;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  h1,
+  p {
+    color: $white;
+    text-shadow: 0.1rem 0.1rem 0.2rem $black;
+  }
+
+  hr {
+    background-color: $white;
+    box-shadow: 0.1rem 0.1rem 0.2rem $black;
+  }
+
+  .chulapa-btn-project {
+    color: $white;
+    background-color: transparent;
+    border-color: $white;
+    text-shadow: none;
+    @include hover-focus() {
+      border-color: $light;
+      color: $light;
+      background-color: $dark;
+      text-shadow: none;
+    }
+  }
+}
+
+.header-chulapa {
+  background-color: transparent;
+  color: $body-color;
+
+  h1,
+  p {
+    word-wrap: break-word;
+    -ms-word-wrap: break-word;
+  }
+
+  hr {
+    background-color: color-contrast(
+      $body-bg,
+      $hero-chulapa-bg-color,
+      $body-color
+    );
+  }
+
+  .header-chulapa-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 20vh;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .header-chulapa h1 {
+    font-size: $display4-size;
+  }
+}
+
+// Footer
+@function chulapa-footertop($color1, $color2, $color3) {
+  @if $color1==$color2 {
+    @return $border-width solid $color3;
+  } @else {
+    @return 0;
+  }
+}
+
+.footer-chulapa {
+  background-color: $footer-chulapa-bg-color;
+  color: $footer-chulapa-text-color;
+  font-weight: $font-weight-normal;
+  border-top: chulapa-footertop(
+    $footer-chulapa-bg-color,
+    $body-bg,
+    $footer-chulapa-text-color
+  );
+
+  a {
+    color: $footer-chulapa-hover-color;
+    text-decoration: none;
+
+    font-weight: $font-weight-bold;
+
+    @include hover-focus() {
+      color: $footer-chulapa-text-color;
+    }
+  }
+
+  .chulapa-footer-sociallink {
+    color: transparent;
+
+    @include hover-focus() {
+      color: $footer-chulapa-hover-color;
+    }
+  }
+
+  .fa-stack {
+    @include hover-focus() {
+      color: $footer-chulapa-icon-hover-color;
+    }
+  }
+
+  .fa-inverse {
+    color: $footer-chulapa-icon-color;
+  }
+}
+
+.chulapa-overlay-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.chulapa-min-h-10 {
+  min-height: 10vh;
+}
+
+.chulapa-min-h-20 {
+  min-height: 20vh;
+}
+
+.chulapa-header-image {
+  object-fit: contain;
+  @include fluid-type(
+    height,
+    breakpoint-min("md"),
+    breakpoint-min("lg"),
+    30vh,
+    25vh
+  );
+}
+//Not used
+.chulapa-size-base {
+  font-size: $font-size-base;
+}
+
+.chulapa-masonry {
+  column-count: 2;
+  column-gap: map-get($spacers, 1);
+
+  @include media-breakpoint-up(md) {
+    column-count: 3;
+  }
+
+  .chulapa-masonry-brick {
+    @extend .card;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    margin-bottom: map-get($spacers, 1);
+    display: inline-block;
+    max-width: 100%;
+    @include border-radius($border-radius);
+  }
+}
+
+.chulapa-gradient {
+  background-color: rgba($primary, 0.3);
+  background-image: linear-gradient(
+    to bottom right,
+    rgba($light, 0.5),
+    rgba($light, 0.65) 65%,
+    rgba($light, 0.8) 100%
+  );
+}
+
+.chulapa-avatar-size {
+  border: 1px solid;
+  width: 8vmax;
+  height: 8vmax;
+  @include border-radius(50%, 0);
+}
+
+.chulapa-pagination {
+  .fa-stack {
+    color: transparent;
+
+    @include hover-focus() {
+      color: $pagination-chulapa-bg-hover-color;
+    }
+  }
+
+  .fa-inverse {
+    color: $body-color;
+
+    @include hover-focus() {
+      color: $white;
+    }
+  }
+
+  .chulapa-pagination-inner .page-item {
+    border-radius: 0;
+  }
+
+  .page-link {
+    color: $pagination-chulapa-text-color;
+    background-color: transparent;
+
+    &:hover {
+      z-index: 2;
+      color: $pagination-chulapa-text-hover-color;
+      background-color: $pagination-chulapa-bg-hover-color;
+      border-color: $pagination-chulapa-bg-hover-color;
+    }
+
+    &:focus {
+      outline: $pagination-focus-outline;
+      box-shadow: $pagination-focus-box-shadow;
+    }
+  }
+
+  .page-item {
+    &.active .page-link {
+      color: $pagination-chulapa-text-hover-color;
+      background-color: $pagination-chulapa-bg-hover-color;
+      border-color: $pagination-chulapa-bg-hover-color;
+    }
+
+    &.disabled .page-link {
+      color: change-color($pagination-chulapa-text-color, $alpha: 0.7);
+      pointer-events: none;
+      // Opinionated: remove the "hand" cursor set previously for .page-link
+      cursor: auto;
+      background-color: transparent;
+      border-color: transparent;
+
+      &.chulapa-label {
+        color: $pagination-chulapa-text-color;
+      }
+    }
+  }
+}
+
+.chulapa-card-img {
+  @include border-radius(
+    $card-inner-border-radius $card-inner-border-radius 0 0
+  );
+}
+
+@include media-breakpoint-up(sm) {
+  .chulapa-card-img {
+    @include border-radius(
+      $card-inner-border-radius 0 0 $card-inner-border-radius
+    );
+  }
+}
+.chulapa-toc-wrapper {
+  .list-group-item {
+    background-color: $light;
+    a {
+      color: color-contrast($light);
+    }
+    &:first-child {
+      @include border-top-radius($border-radius-lg);
+      padding-top: map-get($spacers, 2) !important;
+    }
+
+    &:last-child {
+      @include border-bottom-radius($border-radius-lg);
+      padding-bottom: map-get($spacers, 2) !important;
+    }
+  }
+}
+
+.chulapa-toc-reset {
+  border: 0;
+  ul {
+    padding-left: 0;
+    margin-left: 0;
+    padding-right: 0;
+    margin-right: 0;
+    border: 0;
+
+    li {
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 0;
+      font-size: 0.9 * $font-size-base;
+      font-weight: $font-weight-normal !important;
+      padding-right: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+#markdown-toc {
+  @extend .chulapa-toc-wrapper;
+  @extend .list-group;
+  @extend .mb-5;
+  @extend .mx-3;
+  @extend .mx-lg-5;
+  li {
+    @extend .list-group-item;
+    @extend .font-weight-bold;
+    @extend .py-1;
+    @extend .pr-0;
+    @extend .mr-0;
+    @extend .chulapa-toc-reset;
+  }
+}
+
+.chulapa-text-line-through {
+  text-decoration: line-through;
+}
+
+.chulapa-bg-landingpage {
+  background-color: $landingpage-chulapa-bg-color;
+  header {
+    color: $landingpage-chulapa-text-color;
+    a {
+      color: $landingpage-chulapa-text-color;
+    }
+  }
+}
+
+.chulapa-landingpage-color {
+  color: $landingpage-chulapa-text-color;
+  .breadcrumb {
+    .breadcrumb-item {
+      + .breadcrumb-item {
+        &::before {
+          color: mix($info, $landingpage-chulapa-text-color, 50%);
+        }
+      }
+      &.active {
+        color: $landingpage-chulapa-text-color;
+      }
+    }
+  }
+
+  a {
+    color: mix($info, $landingpage-chulapa-text-color, 50%);
+  }
+
+  table,
+  .chulapaDateSocial {
+    color: $landingpage-chulapa-text-color;
+
+    a {
+      color: $landingpage-chulapa-text-color;
+    }
+  }
+
+  hr {
+    background-color: $landingpage-chulapa-text-color;
+  }
+
+  .chulapa-pagination {
+    .page-link {
+      color: $landingpage-chulapa-text-color;
+
+      &:hover {
+        color: $landingpage-chulapa-bg-color;
+        background-color: $landingpage-chulapa-text-color;
+      }
+    }
+  }
+
+  @each $color, $value in $theme-colors {
+    .chulapa-pill-bg-#{$color} {
+      @include badge-variant($value);
+    }
+  }
+}
+
+.chulapa-landingpage-related {
+  color: $landingpage-chulapa-text-color;
+  background-color: $landingpage-chulapa-bg-color;
+
+  .card.chulapa-related {
+    background-color: $landingpage-chulapa-bg-color;
+    border-color: $landingpage-chulapa-text-color !important;
+
+    .card-footer {
+      border-top-color: $landingpage-chulapa-text-color !important;
+    }
+
+    .chulapa-text-body-color {
+      color: $landingpage-chulapa-text-color !important;
+    }
+  }
+}
+
+.chulapa-landingpage-badges {
+  i {
+    color: $landingpage-chulapa-text-color;
+  }
+}
+
+.chulapa-landingpage-tag {
+  a {
+    border: $border-width solid $landingpage-chulapa-text-color;
+    background-color: transparent;
+    color: $landingpage-chulapa-text-color;
+  }
+}
+
+//Navbar modern
+.navbar-chulapa-fab {
+  label {
+    line-height: unset;
+  }
+
+  .navbar-toggler {
+    background-color: $navbar-chulapa-bg-color;
+    border-color: $navbar-chulapa-toggler-border-color;
+    height: 56px;
+    width: 56px;
+    position: fixed;
+    @include border-radius(50%);
+    font-size: 1.25rem;
+    z-index: 20000;
+    cursor: pointer;
+  }
+
+  &-background {
+    height: 56px;
+    width: 56px;
+    @include border-radius(50%);
+    position: fixed;
+    background-image: radial-gradient(
+      $navbar-chulapa-bg-color,
+      $navbar-chulapa-bg-color
+    );
+    z-index: 10000;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  &-nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15000;
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .navbar-nav {
+    position: absolute;
+    top: 50%;
+    left: -100vw;
+    width: 100%;
+    transform: translate(100%, -50%);
+  }
+
+  .dropdown-menu {
+    background-color: $navbar-chulapa-bg-color;
+    border-color: $navbar-chulapa-text-color;
+
+    .dropdown-item {
+      color: $navbar-chulapa-text-color;
+
+      .nav-link {
+        &.disabled {
+          color: $navbar-chulapa-disabled-color;
+        }
+
+        &.active {
+          color: $navbar-chulapa-active-color;
+        }
+      }
+    }
+  }
+
+  .navbar-brand {
+    color: $navbar-chulapa-brand-color;
+
+    @include hover-focus() {
+      color: $navbar-chulapa-brand-hover-color;
+    }
+  }
+
+  .nav-link {
+    color: $navbar-chulapa-text-color;
+
+    &:link,
+    &:visited {
+      display: inline-block;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $navbar-chulapa-hover-color 50%
+      );
+      background-size: 280%;
+      transition: all 0.4s;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $navbar-chulapa-bg-color;
+      transform: translateX(map-get($spacers, 2));
+    }
+
+    &.disabled {
+      color: $navbar-chulapa-disabled-color;
+    }
+
+    &.active {
+      color: $navbar-chulapa-active-color;
+
+      @include hover-focus() {
+        color: $navbar-chulapa-text-color;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .navbar-toggler {
+      bottom: 1.05 * map-get($spacers, 5);
+      right: map-get($spacers, 4);
+    }
+
+    .navbar-chulapa-fab-background {
+      bottom: 1.05 * map-get($spacers, 5);
+      right: map-get($spacers, 4);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .navbar-toggler {
+      top: map-get($spacers, 4);
+      right: 2 * map-get($spacers, 5);
+    }
+
+    .navbar-chulapa-fab-background {
+      top: map-get($spacers, 4);
+      right: 2 * map-get($spacers, 5);
+    }
+  }
+
+  &-button:checked ~ &-background {
+    transform: scale(80);
+  }
+
+  &-button:checked ~ &-nav {
+    opacity: 1;
+    width: 100%;
+
+    .navbar-nav {
+      transform: translate(100vw, -50%);
+    }
+  }
+
+  .navbar-toggler-icon {
+    position: relative;
+
+    &,
+    &::before,
+    &::after {
+      width: 2rem;
+      height: 2px;
+      background-color: $navbar-chulapa-toggler-color;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.6rem;
+    }
+
+    &::after {
+      top: 0.6rem;
+    }
+  }
+
+  &-button:checked + .navbar-toggler .navbar-toggler-icon {
+    background-color: transparent;
+  }
+
+  &-button:checked + .navbar-toggler .navbar-toggler-icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &-button:checked + .navbar-toggler .navbar-toggler-icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}
+
+// Style links on header
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  .chulapa-header-link {
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease-in-out 0.1s;
+    -moz-transition: opacity 0.2s ease-in-out 0.1s;
+    -o-transition: opacity 0.2s ease-in-out 0.1s;
+    transition: opacity 0.2s ease-in-out 0.1s;
+    .fa,
+    .far,
+    .fas,
+    .fal,
+    .fab,
+    .fa-solid,
+    .fa-regular,
+    .fa-light,
+    .fa-thin,
+    .fa-duotone,
+    .fa-sharp,
+    .fa-brands {
+      &:hover {
+        -webkit-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+        transform: scale(1, 1);
+      }
+    }
+  }
+
+  &:hover .chulapa-header-link {
+    opacity: 1;
+  }
+}
+
+// Repositioning Clipboard button
+.btn-chulapa-copy-code {
+  position: absolute;
+  right: 30px;
+  margin-top: -0.3rem;
+  font-size: $font-size-sm;
+}
+
+// Cards on related snippet
+.card.chulapa-related {
+  border-radius: $card-border-radius !important;
+
+  border-color: $card-border-color;
+
+  .card-text {
+    opacity: 0.9;
+  }
+
+  .card-footer {
+    border-top-color: $card-border-color;
+    opacity: 0.9;
+  }
+}
+
+// Normalize carousel
+
+.chulapa-carousel {
+  height: 75vh;
+  object-fit: contain;
+}
+
+.chulapa-border-card-index {
+  border-color: $indexcards-chulapa-border-color;
+}
+
+// Chulapa disable fa animation
+
+.chulapa-fa-static {
+  .fa,
+  .far,
+  .fas,
+  .fal,
+  .fab,
+  .fa-solid,
+  .fa-regular,
+  .fa-light,
+  .fa-thin,
+  .fa-duotone,
+  .fa-sharp,
+  .fa-brands {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+
+    &:hover {
+      -webkit-transform: none;
+      -ms-transform: none;
+      -o-transform: none;
+      transform: none;
+    }
+  }
+}
+
+// Styles for sidebar
+
+.chulapa-btn-sidebar {
+  bottom: 1.05 * map-get($spacers, 5);
+  left: 0;
+  margin-left: -400px;
+  opacity: 0.4;
+  z-index: 1099;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.chulapa-btn-nofocus {
+  &.close {
+    text-shadow: none;
+    opacity: 0.6;
+
+    &:before {
+      content: "" !important;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+    text-shadow: none;
+  }
+}
+
+.bs-canvas-overlay {
+  opacity: 0;
+  z-index: -1;
+  &.show {
+    opacity: 0.3;
+    z-index: 20001;
+  }
+}
+
+.bs-canvas {
+  top: 0;
+  width: 300px;
+  margin-left: -300px;
+  z-index: 20010;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.bs-canvas-left {
+  left: 0;
+}
+.bs-canvas-anim {
+  transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+}
+
+// Classes for qusdis
+
+@mixin ch_bcolor($color1, $color2) {
+    @if $color1==$color2 {
+      @extend .btn-secondary;
+  } @else {
+      @extend .btn-primary;
+  }
+}
+
+$cusdis-text-color: color-contrast($footer-chulapa-bg-color, $black, $white);
+
+#ch-cusdis {
+  background-color: $footer-chulapa-bg-color;
+  color: $cusdis-text-color;
+  overflow: hidden;
+
+  .bg-blue-500 {
+    @extend .bg-success;
+    color: color-contrast($success, $black, $white);
+    margin-left: 15vw;
+    margin-right: 15vw;
+    padding: 1rem !important;
+    font-size: $font-size-sm;
+    text-align: center;
+    border-radius: $input-border-radius-lg;
+  }
+
+  input,
+  textarea {
+    &.bg-transparent:focus {
+      background-color: white !important;
+      color: $black !important;
+    }
+
+    @extend .form-control;
+  }
+
+  button {
+    &.bg-gray-200 {
+      @extend .btn;
+      font-weight: $headings-font-weight;
+      font-family: $headings-font-family;
+      @include ch_bcolor($primary, $footer-chulapa-bg-color);
+    }
+  }
+
+  .border-color-gray-200 {
+    border-color: $cusdis-text-color;
+  }
+
+  //Name
+  .font-medium {
+    color: $footer-chulapa-text-color;
+    font-family: $headings-font-family;
+    font-weight: $font-weight-bold;
+  }
+
+  .text-gray-500 {
+    //Comment
+    color: $cusdis-text-color;
+    &.text-sm {
+      //Time
+      @extend time;
+      color: $footer-chulapa-text-color;
+      font-weight: $font-weight-normal;
+    }
+  }
+
+  //Reply button
+  button {
+    &.text-gray-500 {
+      &.text-sm {
+        font-family: $font-family-base;
+        font-weight: $font-weight-normal;
+        @extend .btn;
+        @extend .btn-sm;
+        @include button-variant($footer-chulapa-bg-color,$footer-chulapa-text-color);
+      }
+    }
+  }
+
+  .border-color-gray-200 {
+    border-color: $footer-chulapa-text-color;
+  }
+
+  .underline {
+    color: $footer-chulapa-text-color;
+    text-decoration: none;
+    font-weight: bold;
+
+    @include hover-focus() {
+      color: $footer-chulapa-hover-color;
+    }
+  }
+}
+
+//wellcomments
+
+$wlc-text-color: color-contrast($footer-chulapa-bg-color, $black, $white);
+
+#welcomments__container {
+  text-align: left;
+  font-family: $font-family-base;
+  overflow-x: hidden;
+
+  //Name
+  .welcomments__comments-title,
+  .welcomments__author-name {
+    color: $footer-chulapa-text-color;
+    font-family: $headings-font-family;
+    font-weight: $font-weight-bold;
+  }
+  //Time
+  .welcomments__comment-time {  
+    @extend time;
+    time {
+      color: $footer-chulapa-text-color;
+      font-weight: $font-weight-normal;
+    }  
+  }
+
+  .welcomments__comment .welcomments__comment-message, .welcomments__email-notice, .welcomments__markdown-notice {
+    color: $wlc-text-color;
+    font-weight: $font-weight-normal;
+    pre {
+      background-color: $wlc-text-color;
+    }
+    a {
+      color: $wlc-text-color;
+      @include hover-focus() {
+          color: $footer-chulapa-hover-color;
+      }
+    }
+  }
+
+  $welc_levs: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+  @each $l in $welc_levs {
+    .welcomments__nesting-level-#{$l} {
+      border-color: $footer-chulapa-text-color;
+    }
+  }
+
+  //Reply button
+  .welcomments__comment-reply-link {
+    font-family: $font-family-base;
+    @extend .btn;
+    @extend .btn-sm;
+    @include button-variant(
+      $footer-chulapa-bg-color,
+      $footer-chulapa-text-color
+    ); 
+  }
+
+  input,
+  textarea {
+    @extend .form-control;
+  }
+
+  label {
+    font-size: $font-size-sm;
+    font-family: $font-family-base;
+    color: $footer-chulapa-text-color;
+    .welcomments__optional-notice {
+      color: $footer-chulapa-text-color;
+      opacity: 0.8;
+    }
+  }
+
+  .welcomments__submit-button {
+    @extend .btn;
+    font-weight: $headings-font-weight;
+    font-family: $headings-font-family;
+    @include ch_bcolor($primary, $footer-chulapa-bg-color);
+  }
+  
+  .welcomments__form-group {
+    @extend .form-group;
+  }
+  
+}
+
+// For disqus recommendations
+#disqus_recommendations {
+    width: 100%;
+}
+
+
+// For applause button
+
+applause-button {
+  
+  div.style-root {
+    fill: $body-color !important;
+    stroke: $body-color !important;
+    color: $body-color !important;
+  }
+  
+    .count-container {
+      top: -60% !important;
+      color: $body-color !important;
+    }
+  
+    &.clap-limit-exceeded div {
+      fill: $info !important;
+      stroke: $info !important;
+      color: $info !important;
+    }
+}
+
+.chulapa-bg-landingpage {
+  applause-button {
+    div.style-root {
+      fill: $landingpage-chulapa-text-color !important;
+      stroke: $landingpage-chulapa-text-color !important;
+      color: $landingpage-chulapa-text-color !important;
+    }
+    
+    .count-container {
+      color: $landingpage-chulapa-text-color !important;
+    }
+  }
+}
+

@@ -1,0 +1,12 @@
+flight_controller:
+  name: Flight Controller
+  image: assets/img//flight_controller.jpg
+  # description: Learn to use subcategories!
+raspberrypi:
+  name: Raspberry Pi
+  image: assets/img//raspberrypi.jpg
+  # description: Welcome to Odin, time to get started
+jetson:
+  name: Jetson
+  image: assets/img//jetson.jpg
+  # description: Welcome to Odin, time to get started

@@ -1,0 +1,125 @@
+/*!
+ * Misc classes and formats for chulapa
+ */
+
+
+// Defaults needed as Bootstrap doesn't specifically format these tags
+body {
+    min-height: 100vh;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin-top:$spacer;
+}
+
+img {
+    max-width: 95%;
+    height: auto;
+    @include border-radius($border-radius-lg);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    @extend .table;
+    @extend .table-sm;
+    @extend .table-responsive;
+    color: $body-color;
+    display: block;
+
+    thead {
+        th {
+            color: $thead-chulapa-text-color;
+            background-color: $thead-chulapa-bg-color;
+            border: 0;
+        }
+    }
+}
+
+hr {
+    height: 0.125rem;
+    border-width: 0;
+    background-color: $secondary;
+}
+
+blockquote {
+    @extend .blockquote;
+    @extend .px-2;
+    @extend .py-1;
+    background-color: $blockquote-chulapa-bg-color;
+    color: $blockquote-chulapa-text-color;
+    @include border-radius($border-radius-lg);
+}
+
+.footnotes {
+  font-size:$font-size-sm;
+  color: $footnote-chulapa-text-color;
+  margin-left: 1.5*$spacer;
+  margin-right: 1.5*$spacer;
+  border-top: $border-width solid $secondary;
+  
+  ol {
+    margin-top: $spacer;
+  }
+}
+
+a.reversefootnote {
+  color: $body-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+figcaption, caption, .figcaption, .caption {
+  @extend .figure-caption;
+  color: $footnote-chulapa-text-color;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+pre {
+    @extend .p-2;
+}
+
+
+// Could be overriden by highlight css
+.highlight pre {
+    background-color: $pre-chulapa-bg-color;
+}
+
+.task-list {
+  margin: 0;
+  padding: 0;
+ .task-list-item {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    .task-list-item-checkbox{
+     margin-right: $spacer * .5;
+    }
+  }
+}
+
+
+
+// Transition on icons
+ // Icons
+
+.fa, .far, .fas, .fal, .fab, .fa-solid, .fa-regular, .fa-light, .fa-thin, 
+.fa-duotone, .fa-sharp, .fa-brands { 
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  
+  &:hover {
+    -webkit-transform: scale(1.3, 1.3);
+    -ms-transform: scale(1.3, 1.3);
+    -o-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+  
+  }
+}
