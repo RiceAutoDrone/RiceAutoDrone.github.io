@@ -111,26 +111,37 @@ navbar:
   style     :  #default is the classical top navbar, set "fab" for a floating action button navbar or "dual"
   expand    :  # At which device size expand the navbar menu. default[md] https://getbootstrap.com/docs/4.5/layout/overview/
   brand:
-    title   :  # Title in navbar
+    title   :  AutoDrone # Title in navbar
     url     :  # default["url/baseurl"]
     img     :  # An small image, try 30x30px
   nav:
   - title   : Settings # Label
     url     : /settings/ # url
-  # - title   : # Label submenu
-  #   child:
-  #    - title: # Child label
-  #      url  : # child url
-  #    - title: # Child label
-  #      url  : # child url
+  - title   : Hardware # Label
+    url     : /hardware/ # url
+  - title   : Firmware # Label
+    url     : /firmware/ # url
+  - title   : Detection # Label
+    url     : /detection/ # url
+  - title   : Website # Label submenu
+    child:
+     - title: Blogging # Child label
+       url  : /help/blog/ # child url
+     - title: Demo # Child label
+       url  : /help/demo/ # child url
+     - title: Docs # Child label
+       url  : /help/docs/ # child url
 
 #Social links to be placed on your site footer
 footer:
   links:
-    - label : #Label
-      icon  : # Fontawesome 5 icon
-      url   : # A link or email: https://twitter.com/jack, mail@example.com
-  copyright: # default is © <year> <name>
+    - label : Repo on Github # Label
+      icon  : fab fa-github # Fontawesome 5 icon
+      url   : https://github.com/RiceAutoDrone/RiceAutoDrone.github.io.git # A link or email: https://twitter.com/jack, mail@example.com
+    - label : "RSS"
+      icon  : "fa fa-rss"
+      url   :  "./atom.xml"
+  copyright: # default is © <year> <name> 
 
 # C. Theme Settings
 # Google Fonts https://fonts.google.com/, add as many as you need
@@ -154,17 +165,22 @@ paginator_maxnum: 3  #default[3] Custom: max of number to be displayed on the pa
 
 
 # Collections https://jekyllrb.com/docs/step-by-step/09-collections/
+# collections:
+#   demo:
+#     output: true
+#     permalink: /help/demo/:name
+#   docs:
+#     output: true
+#     permalink: /help/docs/:name
+#   skins:
+#     output: true
+#     permalink: /help/skins/:name
+# collections_dir     : collections
 collections:
-  demo:
+  raspberrypi:
     output: true
-    permalink: /demo/:name
-  docs:
-    output: true
-    permalink: /docs/:name
-  skins:
-    output: true
-    permalink: /skins/:name
-collections_dir     : docs/collections
+    permalink: /settings/raspberrypi/:name
+collections_dir     : collections
 permalink           : /:year:month:day_:title/
 
 
@@ -182,31 +198,40 @@ defaults:
   -
     scope:
       path: ""
-      type: "posts"
-    values:
-      header_type       : "post"
-      include_on_search : true
-      include_on_feed   : true
-      show_date         : true
-      show_related      : true
-      show_bottomnavs   : true
-      show_sociallinks  : true
-      show_comments     : true
-      show_tags         : true
-      show_categories   : true
-      show_author       : true
-      show_toc          : false
-  -
-    scope:
-      path: ""
-      type: "demo"
+      type: "raspberrypi"
     values:
       header_type       : "hero"
-      show_related      : true
-      show_bottomnavs   : true
-      show_sociallinks  : true
       include_on_search : true
-      include_on_feed   : true
+      show_bottomnavs   : true
+      show_comments     : true
+  # -
+  #   scope:
+  #     path: ""
+  #     type: "posts"
+  #   values:
+  #     header_type       : "post"
+  #     include_on_search : true
+  #     include_on_feed   : true
+  #     show_date         : true
+  #     show_related      : true
+  #     show_bottomnavs   : true
+  #     show_sociallinks  : true
+  #     show_comments     : true
+  #     show_tags         : true
+  #     show_categories   : true
+  #     show_author       : true
+  #     show_toc          : false
+  # -
+  #   scope:
+  #     path: ""
+  #     type: "demo"
+  #   values:
+  #     header_type       : "hero"
+  #     show_related      : true
+  #     show_bottomnavs   : true
+  #     show_sociallinks  : true
+  #     include_on_search : true
+  #     include_on_feed   : true
 
 
 
