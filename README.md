@@ -1,5 +1,3 @@
-# Chulapa website
+# Rice Autodrone
 
-This folder contains the source code of the webpage <https://dieghernan.github.io/chulapa/>.
-
-If you are looking for the source code of the Jekyll theme Chulapa, you can find it on <https://github.com/dieghernan/chulapa>
+python detect.py --weights yolov5s.pt --source 'http://192.168.4.1:8081/0/stream'  
