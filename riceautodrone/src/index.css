@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 132px); /* Viewport height */
+}
+
+.content-full {
+  flex: 1; /* Grow to take available space */
+  /* Additional styles */
+}
+
+.inverse {
+  filter: invert(100%);
+}
+
+.text-center {
+  width: 50%; /* Takes up 50% of the width, leaving 25% on each side */
+  margin: 0 auto; /* This will center the div */
+  text-align: center; /* This will center the text inside the div */
+}

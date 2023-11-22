@@ -1,0 +1,19 @@
+.footer {
+  background-color: #0d1117; /* Dark background color */
+  color: #ffffff; /* White text color */
+  text-align: center; /* Centers the content */
+  padding: 20px 0; /* Padding above and below the content */
+}
+
+.footer-content {
+  display: inline-block; /* Inline block for width to fit content */
+}
+
+.fas.fa-rocket {
+  font-size: 24px; /* Size of the rocket icon */
+  margin-right: 10px; /* Space between the icon and the text */
+}
+
+.footer-text {
+  vertical-align: middle; /* Aligns the text vertically with the icon */
+}

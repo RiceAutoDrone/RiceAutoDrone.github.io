@@ -20,10 +20,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +44,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "customize-cra": "^1.0.0",
+    "gh-pages": "^6.1.0",
+    "raw-loader": "^4.0.2",
+    "react-app-rewired": "^2.2.1"
+  },
+  "homepage": "http://{github-username}.github.io/{repo-name}"
 }
