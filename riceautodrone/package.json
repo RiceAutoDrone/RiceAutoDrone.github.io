@@ -1,6 +1,7 @@
 {
   "name": "riceautodrone",
   "version": "0.1.0",
+  "homepage": "https://RiceAutoDrone.github.io/RiceAutoDrone.github.io",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
@@ -20,12 +21,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +51,5 @@
     "gh-pages": "^6.1.0",
     "raw-loader": "^4.0.2",
     "react-app-rewired": "^2.2.1"
-  },
-  "homepage": "http://{github-username}.github.io/{repo-name}"
+  }
 }
