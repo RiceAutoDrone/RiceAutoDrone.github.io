@@ -1,8 +1,12 @@
-const { override, addWebpackModuleRule } = require('customize-cra');
+const { override, addWebpackAlias, addWebpackModuleRule } = require('customize-cra');
+const path = require('path');
 
 module.exports = override(
-  addWebpackModuleRule({
-    test: /\.md$/,
-    use: 'raw-loader',
-  })
+    addWebpackAlias({
+        'buffer': path.resolve(__dirname, 'node_modules', 'buffer', 'index.js')
+    }),
+    addWebpackModuleRule({
+        test: /\.md$/,
+        use: 'raw-loader',
+    })
 );

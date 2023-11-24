@@ -1,0 +1,97 @@
+.markdown-container {
+  position: relative;
+  padding: 20px;
+  text-align: left;
+}
+
+@media (max-width: 768px) { /* Adjust the max-width as needed for your design */
+    .markdown-container {
+        padding-left: 10px; /* Or whatever padding you want on smaller screens */
+        padding-right: 10px;
+    }
+}
+
+.markdown img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.code-block {
+  position: relative;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-left: 3px solid #f36d33;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+.inline-code {
+  background-color: #f5f5f5;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+
+.code-block pre code {
+  white-space: pre-wrap;
+}
+
+.copy-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 5px 10px;
+  border: none; /* Remove borders */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer/hand icon */
+  font-size: 0.85rem;
+}
+
+.copy-button:hover {
+  background-color: #45a049; /* Darker green background */
+}
+
+/* Add styles for images if necessary */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Table styles */
+.markdown-container table {
+    border-collapse: collapse;
+    width: 100%; /* Adjust width as needed */
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.markdown-container table th,
+.markdown-container table td {
+    border: 1px solid #ddd; /* Light grey border */
+    text-align: left; /* Align text to the left */
+    padding: 8px; /* Padding inside cells */
+}
+
+/* Header styles */
+.markdown-container table th {
+    background-color: #f4f4f5; /* Light grey background for headers */
+    color: #333; /* Dark grey text for headers */
+}
+
+/* Zebra striping for rows */
+.markdown-container table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Lighter grey for even rows */
+}
+
+.markdown-container table tr:hover {
+    background-color: #f1f1f1; /* Slightly different grey for hover */
+}

@@ -5,7 +5,6 @@ We are currently using [QWinOut Q705 6-Aixs RC Drone](https://www.amazon.com/QWi
 
 <img src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71Xl5pkLIJL._AC_SX679_.jpg" width="300" height="300" />
 
-
 ### Cube Black Flight Controller:
 
 <img src="https://docs.px4.io/v1.11/assets/flight_controller/cube/pixhawk2_cube_hero.png" width="300" height="200" />

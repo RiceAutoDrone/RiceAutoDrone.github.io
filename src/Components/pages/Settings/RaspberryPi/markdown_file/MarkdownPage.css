@@ -1,0 +1,25 @@
+/* MarkdownPage.css */
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.placeholder-button {
+    visibility: hidden;
+}
+
+.prev-button button,
+.next-button button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f4f4f5;
+    cursor: pointer;
+    /* Add other button styles as needed */
+}
+
+.prev-button button:hover,
+.next-button button:hover {
+    /* Add hover styles as needed */
+}

@@ -7,11 +7,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {Provider} from "react-redux";
+import { Buffer } from 'buffer';
 
 // Import Components
 import App from './App';
 import reportWebVitals from './Components/Other/reportWebVitals';
 import { store } from "./Store/store";
+
+window.Buffer = Buffer;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

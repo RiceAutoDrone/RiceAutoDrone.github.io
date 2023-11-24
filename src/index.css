@@ -20,7 +20,19 @@ code {
 
 .content-full {
   flex: 1; /* Grow to take available space */
-  /* Additional styles */
+}
+
+.content-container {
+    padding-left: 25%;
+    padding-right: 25%;
+    text-align: left;
+}
+
+@media (max-width: 768px) { /* Adjust the max-width as needed for your design */
+    .content-container {
+        padding-left: 10px; /* Or whatever padding you want on smaller screens */
+        padding-right: 10px;
+    }
 }
 
 .inverse {

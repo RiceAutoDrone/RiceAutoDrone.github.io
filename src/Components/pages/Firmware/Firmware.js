@@ -21,7 +21,9 @@ const Firmware = (props) => {
                         condition={true}
                         subheader="Settings"
                     />
-                    <Markdown markdown={markdown}/>
+                    <div className="content-container">
+                        <Markdown markdown={markdown}/>
+                    </div>
                 </div>
             </section>
             <FooterAll />

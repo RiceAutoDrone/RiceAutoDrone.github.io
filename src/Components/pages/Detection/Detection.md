@@ -25,8 +25,9 @@ python Identification/object_detection+depth_estimation.py
 
 ## Result
 
-<img src="{{ site.baseurl }}/assets/img/YOLOv5_test.gif" width="500" height="300" />
-<!-- ![](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/YOLOv5_test.gif) -->
+<img src="../../../assets/YOLOv5_test.gif" width="500" height="300" />
+
+![](https://github.com/Rice-MECE-Capstone-Projects/Autodrone/blob/main/Photos/YOLOv5_test.gif)
 
 ## Keybindings
 

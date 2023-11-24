@@ -1,6 +1,10 @@
 // Import css
 import './Main.css';
 
+// Import React module
+import {useLocation} from "react-router-dom";
+import {useEffect} from "react";
+
 // Import Components
 import NavbarAll from '../../Other/Navbar/Navbar';
 import FooterAll from '../../Other/Footer/Footer';
@@ -9,6 +13,13 @@ import background from '../../../assets/Cover.jpg';
 import github from '../../../assets/github.svg';
 
 const Main = (props) => {
+    const location = useLocation();
+
+    // Scroll to the top every time the location.pathname changes
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
     return(
         <>
             <NavbarAll />
