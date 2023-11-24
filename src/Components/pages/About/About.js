@@ -10,22 +10,27 @@ import NavbarAll from "../../Other/Navbar/Navbar";
 import FooterAll from "../../Other/Footer/Footer";
 import Banner from "../../Other/Banner/Banner";
 import background from "../../../assets/Cover.jpg";
-import pi from '../../../assets/Member_Image/01_2023_Spring/Eric Lin.jpg'
+import linkedIn from "../../../assets/LinkedIn-Wordmark-White-Logo.wine.svg";
 
 // ===========================================================================================
 // DO NOT MODIFY INFORMATION THAT IS NOT YOUR CURRENT SEMESTER!! IT'S INAPPROPRIATE TO DO SO!!
 // ===========================================================================================
 const teamMembersBySemester = {
-  // More semesters...
-  'Fall 2023': [
-    // Array of team members for Fall 2023
-  ],
-  'Spring 2023': [
-    // Array of team members for Spring 2023
-      { name: "Yu-Che Lin (Eric)", image: '../../../assets/Member_Image/01_2023_Spring/Eric Lin.jpg', location: "Taichung, TW", contact: "" },
-      { name: "Shaun Lin"        , image: '../../../assets/Member_Image/01_2023_Spring/Eric Lin.jpg', location: "Taichung, TW", contact: "" },
-      { name: "Lucie Bodie"      , image: '../../../assets/Member_Image/01_2023_Spring/Eric Lin.jpg', location: "Taichung, CN", contact: "" },
-  ],
+    // More semesters...
+    'Fall 2023': [
+        // Array of team members for Fall 2023
+        { name: "Yu-Che (Eric) Lin"   , image: require('../../../assets/Member_Image/01_2023_Spring/Eric_Lin.jpg'), location: "Taichung, TW", contact: "https://www.linkedin.com/in/eric2678/" },
+        { name: "Zi-Kang (Karl) Sheng", image: require('../../../assets/Member_Image/01_2023_Spring/Eric_Lin.jpg'), location: ", CN", contact: "https://www.linkedin.com/in/zikang-sheng-682a73149/" },
+        { name: "Ze-Ning Li"          , image: require('../../../assets/Member_Image/01_2023_Spring/Eric_Lin.jpg'), location: ", CN", contact: "https://www.linkedin.com/in/zening-li-20074a177/" },
+        { name: "Yi-Han Hong"         , image: require('../../../assets/Member_Image/01_2023_Spring/Eric_Lin.jpg'), location: ", CN", contact: "https://www.linkedin.com/in/yihanh/" },
+    ],
+
+    'Spring 2023': [
+        // Array of team members for Spring 2023
+        { name: "Yu-Che (Eric) Lin"    , image: require('../../../assets/Member_Image/01_2023_Spring/Eric_Lin.jpg'), location: "Taichung, TW", contact: "https://www.linkedin.com/in/eric2678/" },
+        { name: "Hsuan-You (Shaun) Lin", image: require('../../../assets/Member_Image/01_2023_Spring/Eric_Lin.jpg'), location: "Taichung, TW", contact: "https://www.linkedin.com/in/hsuanyou-lin/" },
+        { name: "Zi-Kang (Karl) Sheng" , image: require('../../../assets/Member_Image/01_2023_Spring/Eric_Lin.jpg'), location: ", CN", contact: "https://www.linkedin.com/in/zikang-sheng-682a73149/" },
+    ],
 };
 // ===========================================================================================
 // DO NOT MODIFY INFORMATION THAT IS NOT YOUR CURRENT SEMESTER!! IT'S INAPPROPRIATE TO DO SO!!
@@ -54,10 +59,24 @@ const About = (props) => {
                             <div className="team-members-container">
                                 {members.map(member => (
                                     <div className="team-member" key={member.name}>
-                                        <div className="member-image" style={{ backgroundImage: `url(${member.image})` }} />
-                                        <h3>{member.name}</h3>
-                                        <p>{member.contact}</p>
-                                        <p>{member.location}</p>
+                                        <div className="member-image-container">
+                                            <img src={member.image} alt={member.name} className="member-image"/>
+                                        </div>
+                                        <div className="member-details">
+                                            <h3>{member.name}</h3>
+                                            <p>{member.location}</p>
+                                            {member.contact && (
+                                                <div className="linkedin-button-container">
+                                                    <a href={member.contact} target="_blank" rel="noopener noreferrer" className="linkedin-button">
+                                                        <img
+                                                            className="linkedin-logo"
+                                                            src={linkedIn}
+                                                            alt={`${member.name} LinkedIn`}
+                                                        />
+                                                    </a>
+                                                </div>
+                                            )}
+                                        </div>
                                     </div>
                                 ))}
                             </div>

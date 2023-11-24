@@ -101,4 +101,4 @@ python detect.py --weights yolov5s.pt --source 'http://192.168.4.1:8081/0/stream
 ``` 
 
 ## Checkpoint
-- [Image](https://rice.box.com/s/v6cqf1latlzf81486hab544jlbu6w94z)
+- [Image](https://rice.box.com/s/n6n4fh7v391f6pif44mt7hv17pc2dcc7)

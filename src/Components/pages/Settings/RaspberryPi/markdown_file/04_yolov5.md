@@ -51,4 +51,4 @@ python detect.py --weights yolov5s.pt --source 0
 ```
 
 ## Checkpoint
-- [Coming Soon!]()
+- [Image](https://rice.box.com/s/2nue74tb1cp89zjnk5b1p9djniv71i6p)
