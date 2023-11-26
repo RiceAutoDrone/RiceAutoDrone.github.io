@@ -19,17 +19,17 @@ const teamMembersBySemester = {
     // More semesters...
     'Fall 2023': [
         // Array of team members for Fall 2023
-        { name: "Yu-Che (Eric) Lin"   , image: require('../../../assets/Member_Image/01_2023_Spring/Eric_Lin.jpg'), location: "Taichung, TW", contact: "https://www.linkedin.com/in/eric2678/" },
-        { name: "Zi-Kang (Karl) Sheng", image: require('../../../assets/Member_Image/01_2023_Spring/Eric_Lin.jpg'), location: ", CN", contact: "https://www.linkedin.com/in/zikang-sheng-682a73149/" },
-        { name: "Ze-Ning Li"          , image: require('../../../assets/Member_Image/01_2023_Spring/Eric_Lin.jpg'), location: ", CN", contact: "https://www.linkedin.com/in/zening-li-20074a177/" },
-        { name: "Yi-Han Hong"         , image: require('../../../assets/Member_Image/01_2023_Spring/Eric_Lin.jpg'), location: ", CN", contact: "https://www.linkedin.com/in/yihanh/" },
+        { name: "Yu-Che (Eric) Lin"   , image: require('../../../assets/Member_Image/02_2023_Fall/Eric_Lin.jpg'), location: "Taichung, TW", contact: "https://www.linkedin.com/in/eric2678/" },
+        { name: "Zi-Kang (Karl) Sheng", image: require('../../../assets/Member_Image/02_2023_Fall/placeholder.jpg'), location: "Shanghai, CN", contact: "https://www.linkedin.com/in/zikang-sheng-682a73149/" },
+        { name: "Ze-Ning Li"          , image: require('../../../assets/Member_Image/02_2023_Fall/placeholder.jpg'), location: ", CN", contact: "https://www.linkedin.com/in/zening-li-20074a177/" },
+        { name: "Yi-Han Hong"         , image: require('../../../assets/Member_Image/02_2023_Fall/Yihan.jpg'), location: "Suzhou, CN", contact: "https://www.linkedin.com/in/yihanh/" },
     ],
 
     'Spring 2023': [
         // Array of team members for Spring 2023
         { name: "Yu-Che (Eric) Lin"    , image: require('../../../assets/Member_Image/01_2023_Spring/Eric_Lin.jpg'), location: "Taichung, TW", contact: "https://www.linkedin.com/in/eric2678/" },
-        { name: "Hsuan-You (Shaun) Lin", image: require('../../../assets/Member_Image/01_2023_Spring/Eric_Lin.jpg'), location: "Taichung, TW", contact: "https://www.linkedin.com/in/hsuanyou-lin/" },
-        { name: "Zi-Kang (Karl) Sheng" , image: require('../../../assets/Member_Image/01_2023_Spring/Eric_Lin.jpg'), location: ", CN", contact: "https://www.linkedin.com/in/zikang-sheng-682a73149/" },
+        { name: "Hsuan-You (Shaun) Lin", image: require('../../../assets/Member_Image/01_2023_Spring/placeholder.jpg'), location: "Taichung, TW", contact: "https://www.linkedin.com/in/hsuanyou-lin/" },
+        { name: "Zi-Kang (Karl) Sheng" , image: require('../../../assets/Member_Image/01_2023_Spring/placeholder.jpg'), location: "Shanghai, CN", contact: "https://www.linkedin.com/in/zikang-sheng-682a73149/" },
     ],
 };
 // ===========================================================================================
