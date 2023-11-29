@@ -1,11 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.381cddf9.css",
-    "main.js": "/static/js/main.1571aa6b.js",
+    "main.js": "/static/js/main.d259026e.js",
     "static/js/599.5ccf72b0.chunk.js": "/static/js/599.5ccf72b0.chunk.js",
     "static/media/Eric_Lin.jpg": "/static/media/Eric_Lin.4618cc454ea60981d53f.jpg",
     "static/media/Cover.jpg": "/static/media/Cover.df284dc36a3fb9cd2965.jpg",
+    "static/media/Karl.jpg": "/static/media/Karl.6453c5948a32c5c696c9.jpg",
+    "static/media/Zening.jpg": "/static/media/Zening.df29b446388f51c4adef.jpg",
     "static/media/Yihan.jpg": "/static/media/Yihan.363ee08aca1442ece5ac.jpg",
+    "static/media/Shaun_Lin.jpg": "/static/media/Shaun_Lin.30f20fc697e6a3d20400.jpg",
     "static/media/flight_controller.jpg": "/static/media/flight_controller.012392e2550eee675cbf.jpg",
     "static/media/raspberrypi.jpg": "/static/media/raspberrypi.767d924521a5e5399b3a.jpg",
     "static/media/jetson.jpg": "/static/media/jetson.62190cba38e31f0814db.jpg",
@@ -15,6 +18,6 @@
   },
   "entrypoints": [
     "static/css/main.381cddf9.css",
-    "static/js/main.1571aa6b.js"
+    "static/js/main.d259026e.js"
   ]
 }
