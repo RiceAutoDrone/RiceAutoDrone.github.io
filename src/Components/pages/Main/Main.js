@@ -35,7 +35,7 @@ const Main = (props) => {
 
                     <div className="text-center">
                         <p className="post-hero spacing">
-                            The objective of the project is an automated drone for making up the high colony loss rate of the honeybee population. A high colony loss rate will indirectly affect the growth of many crops. The drone must be able to detect flowers and be able to move closer in all 3 dimensions(altitude, latitude). It will also have to extend a robotic arm to polish the flower.
+                            Though current person re-identification techniques which includes using deep convolutional neural networks to focus on Part-Based Models, Graph Neural Networks, Large-Scale Datasets and Pretraining, have improved the traditional methods that rely on static camera view with computer vision to match and identify individuals, they still encounter limitations when in complex scenarios that involve crowded environments, non-uniform lighting conditions, and dynamic camera viewpoints. These challenges lower the accuracy of current solutions and the ability to apply in the real-world. In order to improve the challenges, we aim to integrate autonomous drones into the person re-identification process. By making use of the capabilities of the drone, we expected to outperform traditional methods in terms of both identification accuracy by 10% and adaptability to dynamic environments.
                         </p>
                     </div>
 
