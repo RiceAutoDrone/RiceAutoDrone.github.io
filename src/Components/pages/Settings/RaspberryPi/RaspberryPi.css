@@ -1,0 +1,42 @@
+/* Styles for the settings link cards container */
+.settings-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between cards */
+    padding: 20px 0;
+}
+
+.settings-link-card {
+    background-color: #f4f4f5; /* Updated card background color */
+    border: 1px solid #dddddd; /* Card border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Simple shadow effect */
+    padding: 15px; /* Spacing inside the card */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover effect */
+    cursor: pointer; /* Change cursor to pointer to indicate the card is clickable */
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Ensure that the link color is the same as the card content */
+}
+
+.settings-link-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.settings-link-card h3 {
+    margin: 0;
+    color: #333333; /* Title color */
+    font-size: 1.25rem; /* Title font size */
+}
+
+.settings-link-card p {
+    color: #666666; /* Text color */
+    margin-top: 8px; /* Spacing after title */
+    line-height: 1.4; /* Line height for readability */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .settings-links {
+        padding: 20px;
+    }
+}

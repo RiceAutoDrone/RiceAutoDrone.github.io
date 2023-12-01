@@ -1,0 +1,78 @@
+.row {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.column {
+  margin-bottom: 20px;
+}
+
+.card-link {
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* The link will inherit the text color from its parent */
+}
+
+.card-group {
+  display: flex;
+  justify-content: center; /* This ensures that the space between cards is distributed evenly */
+  flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
+  gap: 20px; /* Adds space between cards when they wrap, adjust as needed */
+  height: 40vh;
+}
+
+.card {
+  cursor: pointer; /* Changes the cursor to indicate the card is clickable */
+  border: 1px solid #ddd; /* Light grey border */
+  border-radius: 4px; /* Rounded corners */
+  width: calc(25% - 60px); /* Adjusted width for each card */
+  margin: 10px; /* Adjusts space around each card */
+  background: #f4f4f5;
+  /*padding: 20px; !* Padding inside the card *!*/
+  max-width: 300px; /* Max width of the card */
+  min-height: 250px; /* Minimum height of the card */
+}
+
+@media (max-width: 768px) { /* Adjust the breakpoint as necessary */
+  .card {
+    width: calc(50% - 60px); /* Adjust width for smaller screens, for example two cards per row */
+  }
+}
+
+@media (max-width: 480px) { /* Adjust the breakpoint as necessary */
+  .card {
+    width: calc(100% - 60px); /* Full width for very small screens, one card per row */
+  }
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds a shadow on hover for better UI indication */
+}
+
+.card-img-top {
+  max-width: 100%; /* Ensure the image is contained within the card */
+  height: auto;
+  border-bottom: 1px solid #ddd; /* Border between image and card title */
+}
+
+.card-body {
+  padding: 15px; /* Padding within the card */
+  display: flex; /* Establishes a flex container */
+  flex-direction: column; /* Stacks flex items vertically */
+  justify-content: center; /* Centers flex items along the main axis */
+  height: 100%; /* Takes up the full height of the card */
+  padding-top: 2; /* Adds space at the top inside the card-body */
+  padding-bottom: 2; /* Adds space at the bottom inside the card-body */
+}
+
+.card-title {
+  font-size: 1.25rem; /* Example font size */
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.category {
+  padding-top: 3vh;
+  font-weight: bold; /* Makes the font bold */
+  font-size: 2.5em;
+}

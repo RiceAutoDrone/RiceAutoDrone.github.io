@@ -1,0 +1,106 @@
+.team-section {
+  text-align: center;
+  background: #f9f9f9; /* Set the background color to match the title */
+  padding-bottom: 40px; /* Replace margin with padding to include the background color */
+}
+
+.team-section-title {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0; /* Remove top margin if it's causing white space */
+  background: #e8e8e9; /* Make sure this is the same as the .team-section background */
+  padding: 30px 0 20px; /* Add padding to create space instead of margin */
+}
+
+.team-members-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.team-member {
+  flex-basis: calc(20% - 20px); /* Adjusted for 5 in a row, accounting for margin */
+  margin: 10px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.team-member::before {
+  content: '';
+  width: 1px; /* This needs to be here for the element to work but can be any value */
+  float: left; /* This will make the element shape the parent height */
+}
+
+.team-member::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.member-image-container {
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio, adjust as needed */
+  position: relative;
+}
+
+.member-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-details {
+  padding: 10px;
+  /* No changes needed here unless you want to adjust padding */
+}
+
+/* Responsive font size for member names */
+.member-details h3 {
+  font-size: clamp(0.8rem, 1vw, 1.3rem); /* Adjust min, preferred, and max values */
+}
+/*linkedin-button style*/
+.linkedin-button-container {
+    width: 40%; /* or the width you prefer */
+    padding-top: 10%; /* aspect ratio, for example, 10% for a 4:1 ratio */
+    position: relative;
+    display: inline-block;
+    background-color: #0077b5;
+    border-radius: 5px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.linkedin-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the button */
+    width: 80%; /* Adjust based on the size of the container */
+    padding: 8px 0; /* Padding for the top and bottom */
+    background-color: #0077b5; /* LinkedIn brand color */
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    color: white; /* Button text color */
+    box-sizing: border-box;
+}
+
+.linkedin-button:hover {
+    background-color: #005682; /* Darker LinkedIn color for hover */
+}
+
+.linkedin-logo {
+    max-width: 100%;
+    height: auto;
+    display: inline; /* Align the logo image inline */
+}

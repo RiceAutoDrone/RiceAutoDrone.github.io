@@ -1,0 +1,78 @@
+.landing-page {
+  background-color: #22272e;
+}
+
+.github-btn {
+  display: inline-block;
+  margin-top: 12px; /* Adds space above the button */
+  padding: 10px 20px;
+  background-color: #333; /* GitHub dark grey */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.github-btn:hover {
+  background-color: #555; /* Lightens the button on hover */
+}
+
+.post-hero {
+  /* If you have additional styling for your paragraph, include them here */
+  /* Example: */
+  padding: 20px; /* Adds padding inside the container */
+  box-sizing: border-box; /* Includes padding in the width calculation */
+  color: white;
+}
+
+/* For the outline button with class 'btn-outline-info' */
+.btn-outline-info {
+  color: #8250df; /* Text color */
+  border-color: #8250df; /* Border color */
+}
+
+.btn-outline-info:hover {
+  background-color: #8250df;
+  color: white; /* Change text color for contrast on hover */
+}
+
+/* For the large button with class 'btn-lg' */
+.btn-lg {
+  background-color: #8250df;
+  border-color: #8250df;
+}
+
+/* Ensure the text inside the button is visible, if necessary */
+.btn-info, .btn-lg {
+  color: white; /* Or any other color that has a good contrast with #8250df */
+}
+
+.btn-info.disabled, .btn-info:disabled {
+  background-color: #8250df !important; /* Overrides other styles due to specificity and !important */
+  border-color: #8250df !important;
+  color: white; /* Or any other color for text that contrasts well with the background */
+}
+
+.image-container-1 {
+  position: relative;
+  width: 100%; /* Adjust width as necessary */
+  height: 35vh; /* Adjust height to control visible part of the image */
+  overflow: hidden;
+}
+
+.image-container-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* Centers the image, cropping 25% from top and bottom */
+}
+
+.text-container-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Change as needed */
+}
